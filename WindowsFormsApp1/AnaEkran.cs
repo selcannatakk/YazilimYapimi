@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class AliciEkrani : Form
+    public partial class AnaEkran : Form
     {
-        public AliciEkrani()
+        public AnaEkran()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class SaticiEkrani : Form
+    public partial class Hareketler : Form
     {
-        public SaticiEkrani()
+        public Hareketler()
         {
             InitializeComponent();
         }

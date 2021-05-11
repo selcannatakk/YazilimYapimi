@@ -45,18 +45,18 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(643, 298);
+            this.button1.Location = new System.Drawing.Point(368, 177);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 36);
+            this.button1.Size = new System.Drawing.Size(156, 28);
             this.button1.TabIndex = 10;
             this.button1.Text = "Giris Yap";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(644, 357);
+            this.button2.Location = new System.Drawing.Point(578, 177);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 36);
+            this.button2.Size = new System.Drawing.Size(167, 28);
             this.button2.TabIndex = 11;
             this.button2.Text = "Kayit Ol";
             this.button2.UseVisualStyleBackColor = true;
@@ -64,7 +64,9 @@ namespace WindowsFormsApp1
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox6);
@@ -73,7 +75,7 @@ namespace WindowsFormsApp1
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(39, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(797, 225);
+            this.groupBox1.Size = new System.Drawing.Size(797, 257);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -140,8 +142,6 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 552);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Name = "KayitEkrani";
             this.Text = "KayitEkrani";
             this.groupBox1.ResumeLayout(false);
