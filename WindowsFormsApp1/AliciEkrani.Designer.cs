@@ -36,18 +36,18 @@ namespace WindowsFormsApp1
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataUrun = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.btnAliciEkle = new System.Windows.Forms.Button();
+            this.txtAliciBakiye = new System.Windows.Forms.TextBox();
+            this.dataGridBakiye = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataUrun)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBakiye)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +67,6 @@ namespace WindowsFormsApp1
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "groupBox5";
-          //  this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // label2
             // 
@@ -91,11 +90,10 @@ namespace WindowsFormsApp1
             // 
             this.button4.Location = new System.Drawing.Point(143, 168);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 25);
+            this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 13;
             this.button4.Text = "Göster";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox2
             // 
@@ -113,30 +111,30 @@ namespace WindowsFormsApp1
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(299, 21);
+            this.groupBox1.Controls.Add(this.dataUrun);
+            this.groupBox1.Location = new System.Drawing.Point(296, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(423, 198);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seçili Ürünler";
             // 
-            // dataGridView1
+            // dataUrun
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(417, 177);
-            this.dataGridView1.TabIndex = 0;
+            this.dataUrun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataUrun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataUrun.Location = new System.Drawing.Point(3, 18);
+            this.dataUrun.Name = "dataUrun";
+            this.dataUrun.RowHeadersWidth = 51;
+            this.dataUrun.RowTemplate.Height = 24;
+            this.dataUrun.Size = new System.Drawing.Size(417, 177);
+            this.dataUrun.TabIndex = 0;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Controls.Add(this.dataGridView4);
+            this.groupBox4.Controls.Add(this.btnAliciEkle);
+            this.groupBox4.Controls.Add(this.txtAliciBakiye);
+            this.groupBox4.Controls.Add(this.dataGridBakiye);
             this.groupBox4.Location = new System.Drawing.Point(21, 231);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(698, 68);
@@ -144,31 +142,32 @@ namespace WindowsFormsApp1
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bakiye Ekle";
             // 
-            // button1
+            // btnAliciEkle
             // 
-            this.button1.Location = new System.Drawing.Point(183, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 25);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAliciEkle.Location = new System.Drawing.Point(183, 23);
+            this.btnAliciEkle.Name = "btnAliciEkle";
+            this.btnAliciEkle.Size = new System.Drawing.Size(51, 25);
+            this.btnAliciEkle.TabIndex = 11;
+            this.btnAliciEkle.Text = "Ekle";
+            this.btnAliciEkle.UseVisualStyleBackColor = true;
+            this.btnAliciEkle.Click += new System.EventHandler(this.btnAliciEkle_Click);
             // 
-            // textBox7
+            // txtAliciBakiye
             // 
-            this.textBox7.Location = new System.Drawing.Point(39, 26);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 10;
+            this.txtAliciBakiye.Location = new System.Drawing.Point(39, 26);
+            this.txtAliciBakiye.Name = "txtAliciBakiye";
+            this.txtAliciBakiye.Size = new System.Drawing.Size(100, 22);
+            this.txtAliciBakiye.TabIndex = 10;
             // 
-            // dataGridView4
+            // dataGridBakiye
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(316, 18);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(309, 44);
-            this.dataGridView4.TabIndex = 0;
+            this.dataGridBakiye.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridBakiye.Location = new System.Drawing.Point(354, 18);
+            this.dataGridBakiye.Name = "dataGridBakiye";
+            this.dataGridBakiye.RowHeadersWidth = 51;
+            this.dataGridBakiye.RowTemplate.Height = 24;
+            this.dataGridBakiye.Size = new System.Drawing.Size(309, 44);
+            this.dataGridBakiye.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -203,10 +202,10 @@ namespace WindowsFormsApp1
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataUrun)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBakiye)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -220,11 +219,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataUrun;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Button btnAliciEkle;
+        private System.Windows.Forms.TextBox txtAliciBakiye;
+        private System.Windows.Forms.DataGridView dataGridBakiye;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label2;

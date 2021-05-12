@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace WindowsFormsApp1
 {
@@ -15,6 +17,42 @@ namespace WindowsFormsApp1
         public Admin()
         {
             InitializeComponent();
+            bakiyeOnay();
+            UrunOnay();
+
+        }
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-6LL8GP9;Initial Catalog=Project;Integrated Security=True");
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void bakiyeOnay()
+        {
+
+            baglanti.Open( );
+            SqlCommand commant = new SqlCommand(" select* from tblSanalBakiye", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter(commant); // databaseden verilerin aktarılır
+            DataTable dt = new DataTable();  // tablo olusturarak
+            da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
+            dataGridBakiyeOnay.DataSource = dt;        // bu tablo uı da gosterılır 
+            baglanti.Close();
+        }
+        public void UrunOnay()
+        {
+
+            baglanti.Open();
+            SqlCommand commant = new SqlCommand(" select* from tblSanalSatici", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter(commant); // databaseden verilerin aktarılır
+            DataTable dt = new DataTable();  // tablo olusturarak
+            da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
+            dataGridSaticiUrunOnay.DataSource = dt;        // bu tablo uı da gosterılır 
+            baglanti.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,23 +7,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlTypes;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
     public partial class AliciEkrani : Form
     {
+        string anlikTc;
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-6LL8GP9;Initial Catalog=Project;Integrated Security=True");
         public AliciEkrani()
         {
             InitializeComponent();
-            string anlikTc;
+            
             KayitEkrani kayitEkrani = new KayitEkrani();
             anlikTc= kayitEkrani.VeriAktarimi();
+            DataGridBakiyeDoldurma();
+            
+            
+
+            
         }
-
-
-        private void button4_Click(object sender, EventArgs e)
+        
+        private void btnAliciEkle_Click(object sender, EventArgs e)
         {
+            baglanti.Open();    //store proc
+            SqlCommand komut = new SqlCommand("SanalBakiyeEkle", baglanti);
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.AddWithValue("@kullaniciTc",anlikTc.Trim() );
+            komut.Parameters.AddWithValue("@kullaniciBakiye", txtAliciBakiye.Text.Trim());
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+
 
         }
+
+           public void DataGridBakiyeDoldurma()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand(" select* from tblBakiye", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter(komut); // databaseden verilerin aktarılır
+            DataTable dt = new DataTable();  // tablo olusturarak
+            da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
+            dataGridBakiye.DataSource = dt;        // bu tablo uı da gosterılır 
+            baglanti.Close();
+        }
+        
+       
     }
 }

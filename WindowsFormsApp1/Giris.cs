@@ -19,10 +19,10 @@ namespace WindowsFormsApp1
         }
         private void btnGirisGirisYap_Click(object sender, EventArgs e)
         {
-            //string anlikTc;
-            //KayitEkrani kayitEkrani = new KayitEkrani();
-            //anlikTc= kayitEkrani.VeriAktarimi(sender,e);
-            if(cmbGirisKullanici.Text=="Admin Girişi")
+            string anlikTc;                                               // kayit formundan giris formuna veri aktarımı
+            KayitEkrani kayitEkrani = new KayitEkrani();
+            anlikTc = kayitEkrani.VeriAktarimi();
+            if (cmbGirisKullanici.Text=="Admin Girişi")
             {
                 Admin admin = new Admin();
                 admin.Show();

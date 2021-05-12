@@ -32,7 +32,6 @@ namespace WindowsFormsApp1
             this.btnKayitGirisYap = new System.Windows.Forms.Button();
             this.btnKayitKayitOl = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblKayitTc = new System.Windows.Forms.Label();
             this.txtKayitKullaniciAd = new System.Windows.Forms.TextBox();
             this.txtKayitSifre = new System.Windows.Forms.TextBox();
             this.txtKayitTel = new System.Windows.Forms.TextBox();
@@ -66,7 +65,6 @@ namespace WindowsFormsApp1
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblKayitTc);
             this.groupBox1.Controls.Add(this.txtKayitKullaniciAd);
             this.groupBox1.Controls.Add(this.btnKayitKayitOl);
             this.groupBox1.Controls.Add(this.txtKayitSifre);
@@ -83,15 +81,6 @@ namespace WindowsFormsApp1
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            // 
-            // lblKayitTc
-            // 
-            this.lblKayitTc.AutoSize = true;
-            this.lblKayitTc.Location = new System.Drawing.Point(181, 226);
-            this.lblKayitTc.Name = "lblKayitTc";
-            this.lblKayitTc.Size = new System.Drawing.Size(24, 17);
-            this.lblKayitTc.TabIndex = 18;
-            this.lblKayitTc.Text = "Tc";
             // 
             // txtKayitKullaniciAd
             // 
@@ -175,6 +164,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txtKayitSoyad;
         private System.Windows.Forms.TextBox txtKayitTc;
         private System.Windows.Forms.TextBox txtKayitAd;
-        private System.Windows.Forms.Label lblKayitTc;
     }
 }

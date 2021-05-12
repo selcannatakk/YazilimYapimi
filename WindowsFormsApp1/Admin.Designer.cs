@@ -30,22 +30,22 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridBakiyeOnay = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridSaticiUrunOnay = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBakiyeOnay)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridSaticiUrunOnay)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dataGridBakiyeOnay);
             this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(361, 168);
@@ -53,20 +53,20 @@ namespace WindowsFormsApp1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bakiye Onay";
             // 
-            // dataGridView1
+            // dataGridBakiyeOnay
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(355, 147);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridBakiyeOnay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridBakiyeOnay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridBakiyeOnay.Location = new System.Drawing.Point(3, 18);
+            this.dataGridBakiyeOnay.Name = "dataGridBakiyeOnay";
+            this.dataGridBakiyeOnay.RowHeadersWidth = 51;
+            this.dataGridBakiyeOnay.RowTemplate.Height = 24;
+            this.dataGridBakiyeOnay.Size = new System.Drawing.Size(355, 147);
+            this.dataGridBakiyeOnay.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Controls.Add(this.dataGridSaticiUrunOnay);
             this.groupBox2.Location = new System.Drawing.Point(412, 21);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(361, 168);
@@ -74,15 +74,15 @@ namespace WindowsFormsApp1
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ürün Onay";
             // 
-            // dataGridView2
+            // dataGridSaticiUrunOnay
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 18);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(355, 147);
-            this.dataGridView2.TabIndex = 0;
+            this.dataGridSaticiUrunOnay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridSaticiUrunOnay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridSaticiUrunOnay.Location = new System.Drawing.Point(3, 18);
+            this.dataGridSaticiUrunOnay.Name = "dataGridSaticiUrunOnay";
+            this.dataGridSaticiUrunOnay.RowHeadersWidth = 51;
+            this.dataGridSaticiUrunOnay.Size = new System.Drawing.Size(355, 147);
+            this.dataGridSaticiUrunOnay.TabIndex = 0;
             // 
             // button2
             // 
@@ -101,6 +101,7 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 12;
             this.button1.Text = "Onay";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -119,6 +120,7 @@ namespace WindowsFormsApp1
             this.button4.TabIndex = 14;
             this.button4.Text = "Onay";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Admin
             // 
@@ -134,9 +136,9 @@ namespace WindowsFormsApp1
             this.Name = "Admin";
             this.Text = "Admin";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBakiyeOnay)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridSaticiUrunOnay)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -144,9 +146,9 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridBakiyeOnay;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridSaticiUrunOnay;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
