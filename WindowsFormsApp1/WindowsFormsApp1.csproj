@@ -52,11 +52,17 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AnaEkran.cs">
+    <Compile Include="AliciEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnaEkran.Designer.cs">
-      <DependentUpon>AnaEkran.cs</DependentUpon>
+    <Compile Include="AliciEkrani.Designer.cs">
+      <DependentUpon>AliciEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaticiEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaticiEkrani.Designer.cs">
+      <DependentUpon>SaticiEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="Giris.cs">
       <SubType>Form</SubType>
@@ -81,8 +87,11 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AnaEkran.resx">
-      <DependentUpon>AnaEkran.cs</DependentUpon>
+    <EmbeddedResource Include="AliciEkrani.resx">
+      <DependentUpon>AliciEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaticiEkrani.resx">
+      <DependentUpon>SaticiEkrani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>

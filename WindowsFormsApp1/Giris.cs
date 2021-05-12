@@ -17,10 +17,30 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnGirisGirisYap_Click(object sender, EventArgs e)
         {
-
+            //string anlikTc;
+            //KayitEkrani kayitEkrani = new KayitEkrani();
+            //anlikTc= kayitEkrani.VeriAktarimi(sender,e);
+            if(cmbGirisKullanici.Text=="Admin Girişi")
+            {
+                Admin admin = new Admin();
+                admin.Show();
+                this.Hide();
+            }
+             else if (cmbGirisKullanici.Text == "Alıcı Girişi")
+            {
+                AliciEkrani aliciEkrani = new AliciEkrani();
+                aliciEkrani.Show();
+                this.Hide();
+            }
+            else
+            {
+                SaticiEkrani saticiEkrani = new SaticiEkrani();
+                saticiEkrani.Show();
+                this.Hide();
+            }
+           
         }
     }
 }

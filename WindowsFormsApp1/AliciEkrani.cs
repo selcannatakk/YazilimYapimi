@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class AnaEkran : Form
+    public partial class AliciEkrani : Form
     {
-        public AnaEkran()
+        public AliciEkrani()
         {
             InitializeComponent();
+            string anlikTc;
+            KayitEkrani kayitEkrani = new KayitEkrani();
+            anlikTc= kayitEkrani.VeriAktarimi();
+        }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

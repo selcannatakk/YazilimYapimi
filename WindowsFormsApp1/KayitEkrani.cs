@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -15,6 +16,38 @@ namespace WindowsFormsApp1
         public KayitEkrani()
         {
             InitializeComponent();
+        }
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-6LL8GP9;Initial Catalog=Project;Integrated Security=True");
+        string anlikTc="2";
+        public string VeriAktarimi()
+        {
+            anlikTc = txtKayitTc.Text;
+            return anlikTc;
+            
+        }
+        private void btnKayitGirisYap_Click(object sender, EventArgs e)
+        {
+            Giris giris = new Giris();
+            giris.Show();
+            this.Hide();
+
+        }
+        private void btnKayitKayitOl_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();    //store proc
+            SqlCommand komut = new SqlCommand("kullaniciEkle", baglanti);
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.AddWithValue("@kullaniciAd", txtKayitAd.Text.Trim());
+            komut.Parameters.AddWithValue("@kullaniciSoyad", txtKayitSoyad.Text.Trim());
+            komut.Parameters.AddWithValue("@kullaniciGirisAdi", txtKayitKullaniciAd.Text.Trim());
+            komut.Parameters.AddWithValue("@kullaniciTc", txtKayitTc.Text.Trim());
+            komut.Parameters.AddWithValue("@kullaniciMail", txtKayitMail.Text.Trim());
+            komut.Parameters.AddWithValue("@kullaniciTelefon", txtKayitTel.Text.Trim());
+            komut.Parameters.AddWithValue("@kullaniciAdres", txtKayitAdres.Text.Trim());
+            komut.Parameters.AddWithValue("@kullaniciSifre", txtKayitSifre.Text.Trim());
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+
         }
     }
 }
