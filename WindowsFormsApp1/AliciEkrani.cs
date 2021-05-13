@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
             KayitEkrani kayitEkrani = new KayitEkrani();
             anlikTc= kayitEkrani.VeriAktarimi();
             DataGridBakiyeDoldurma();
+            DataGridTUmUrunlerDoldurma();
             
             
 
@@ -42,7 +43,33 @@ namespace WindowsFormsApp1
 
         }
 
-           public void DataGridBakiyeDoldurma()
+       
+        private void btnAliciUrunGoster_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("UrunListeleme", baglanti);
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.AddWithValue("@urunIsmi",txtAliciUrunAdi.Text.Trim());
+            SqlDataAdapter da = new SqlDataAdapter(komut); // databaseden verilerin aktarılır
+            DataTable dt = new DataTable();  // tablo olusturarak
+            da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
+            dataUrun.DataSource = dt;        // bu tablo uı da gosterılır 
+            baglanti.Close();
+        }
+        private void btnAliciAl_Click(object sender, EventArgs e)
+        {
+            // buarda admın ıcın sanal alıcı tablosuna gıdıcek
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("UrunListeleme", baglanti); 
+            baglanti.Close();
+        }
+
+
+
+
+        //******************************************************************************************
+
+        public void DataGridBakiyeDoldurma()
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand(" select* from tblBakiye", baglanti);
@@ -52,7 +79,17 @@ namespace WindowsFormsApp1
             dataGridBakiye.DataSource = dt;        // bu tablo uı da gosterılır 
             baglanti.Close();
         }
-        
+        public void DataGridTUmUrunlerDoldurma()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand(" select* from viewUrunler", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter(komut); // databaseden verilerin aktarılır
+            DataTable dt = new DataTable();  // tablo olusturarak
+            da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
+            dataGridTumUrunler.DataSource = dt;        // bu tablo uı da gosterılır 
+            baglanti.Close();
+        }
+
        
     }
 }

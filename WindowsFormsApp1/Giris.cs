@@ -42,5 +42,10 @@ namespace WindowsFormsApp1
             }
            
         }
+
+        private void cmbGirisKullanici_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

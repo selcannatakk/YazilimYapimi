@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using WindowsFormsApp1.Fonksiyonlar;
 
 namespace WindowsFormsApp1
 {
@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             bakiyeOnay();
             UrunOnay();
+          
+            
 
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-6LL8GP9;Initial Catalog=Project;Integrated Security=True");

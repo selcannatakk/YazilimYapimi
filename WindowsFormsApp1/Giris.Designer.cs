@@ -55,6 +55,7 @@ namespace WindowsFormsApp1
             this.label5.Size = new System.Drawing.Size(37, 17);
             this.label5.TabIndex = 28;
             this.label5.Text = "Sifre";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label4
             // 
@@ -90,6 +91,7 @@ namespace WindowsFormsApp1
             this.cmbGirisKullanici.Name = "cmbGirisKullanici";
             this.cmbGirisKullanici.Size = new System.Drawing.Size(146, 24);
             this.cmbGirisKullanici.TabIndex = 29;
+            this.cmbGirisKullanici.SelectedIndexChanged += new System.EventHandler(this.cmbGirisKullanici_SelectedIndexChanged);
             // 
             // Giris
             // 
