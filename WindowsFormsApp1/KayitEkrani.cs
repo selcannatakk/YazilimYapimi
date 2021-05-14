@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-6LL8GP9;Initial Catalog=Project;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
         
         private void btnKayitGirisYap_Click(object sender, EventArgs e)
         {
@@ -29,16 +29,17 @@ namespace WindowsFormsApp1
         private void btnKayitKayitOl_Click(object sender, EventArgs e)
         {
             baglanti.Open();    //store proc
-            SqlCommand komut = new SqlCommand("kullaniciEkle", baglanti);
-            komut.CommandType = CommandType.StoredProcedure;
-            komut.Parameters.AddWithValue("@kullaniciAd", txtKayitAd.Text.Trim());
-            komut.Parameters.AddWithValue("@kullaniciSoyad", txtKayitSoyad.Text.Trim());
-            komut.Parameters.AddWithValue("@kullaniciGirisAdi", txtKayitKullaniciAd.Text.Trim());
-            komut.Parameters.AddWithValue("@kullaniciTc", txtKayitTc.Text.Trim());
-            komut.Parameters.AddWithValue("@kullaniciMail", txtKayitMail.Text.Trim());
-            komut.Parameters.AddWithValue("@kullaniciTelefon", txtKayitTel.Text.Trim());
-            komut.Parameters.AddWithValue("@kullaniciAdres", txtKayitAdres.Text.Trim());
-            komut.Parameters.AddWithValue("@kullaniciSifre", txtKayitSifre.Text.Trim());
+            SqlCommand komut = new SqlCommand(
+             "insert into tblUsers(UserName,UserSurName,UserLogin_Name,User_TC_Number,Tel_Number,Address,E_Mail,Password)" +
+             "values (@userName, @userSurName, @userLogin_Name, @user_TC_Number, @tel_Number, @address, @e_Mail, @password)", baglanti);
+            komut.Parameters.AddWithValue("@userName", txtKayitAd.Text);
+            komut.Parameters.AddWithValue("@userSurName", txtKayitSoyad.Text);
+            komut.Parameters.AddWithValue("@userLogin_Name", txtKayitKullaniciAd.Text);
+            komut.Parameters.AddWithValue("@user_TC_Number", txtKayitTc.Text);
+            komut.Parameters.AddWithValue("@tel_Number", txtKayitTel.Text);
+            komut.Parameters.AddWithValue("@address", txtKayitAdres.Text);
+            komut.Parameters.AddWithValue("@e_Mail", txtKayitMail.Text);
+            komut.Parameters.AddWithValue("@password", txtKayitSifre.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
 
@@ -46,7 +47,7 @@ namespace WindowsFormsApp1
         }
 
       //------------------------------------------------------------------------------------------------------------------------
-        string anlikTc = "2";
+       /* string anlikTc = "2";
         public string VeriAktarimi()
         {
             anlikTc = txtKayitTc.Text;
@@ -62,6 +63,6 @@ namespace WindowsFormsApp1
             //da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
             //dataGridView1.DataSource = dt;        // bu tablo uı da gosterılır 
             //baglanti.Close();
-        }
+        }*/
     }
 }

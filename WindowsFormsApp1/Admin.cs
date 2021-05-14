@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using WindowsFormsApp1.Fonksiyonlar;
 
 namespace WindowsFormsApp1
 {
@@ -17,19 +16,19 @@ namespace WindowsFormsApp1
         public Admin()
         {
             InitializeComponent();
-            bakiyeOnay();
-            UrunOnay();
+           // bakiyeOnay();
+           // UrunOnay();
           
             
 
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-6LL8GP9;Initial Catalog=Project;Integrated Security=True");
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
-        public void bakiyeOnay()
+       /* public void bakiyeOnay()
         {
 
             baglanti.Open( );
@@ -50,7 +49,7 @@ namespace WindowsFormsApp1
             da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
             dataGridSaticiUrunOnay.DataSource = dt;        // bu tablo uı da gosterılır 
             baglanti.Close();
-        }
+        }***/
 
         private void button4_Click(object sender, EventArgs e)
         {

@@ -32,9 +32,9 @@ namespace WindowsFormsApp1
             this.btnGirisGirisYap = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.cmbGirisKullanici = new System.Windows.Forms.ComboBox();
+            this.txtKullaniciAd = new System.Windows.Forms.TextBox();
+            this.txtsifre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnGirisGirisYap
@@ -66,42 +66,39 @@ namespace WindowsFormsApp1
             this.label4.TabIndex = 27;
             this.label4.Text = "Kullanıcı Adı";
             // 
-            // textBox7
+            // txtKullaniciAd
             // 
-            this.textBox7.Location = new System.Drawing.Point(310, 72);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(146, 22);
-            this.textBox7.TabIndex = 23;
+            this.txtKullaniciAd.Location = new System.Drawing.Point(310, 72);
+            this.txtKullaniciAd.Name = "txtKullaniciAd";
+            this.txtKullaniciAd.Size = new System.Drawing.Size(146, 22);
+            this.txtKullaniciAd.TabIndex = 23;
             // 
-            // textBox6
+            // txtsifre
             // 
-            this.textBox6.Location = new System.Drawing.Point(310, 123);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(146, 22);
-            this.textBox6.TabIndex = 22;
+            this.txtsifre.Location = new System.Drawing.Point(310, 123);
+            this.txtsifre.Name = "txtsifre";
+            this.txtsifre.Size = new System.Drawing.Size(146, 22);
+            this.txtsifre.TabIndex = 22;
             // 
-            // cmbGirisKullanici
+            // label1
             // 
-            this.cmbGirisKullanici.FormattingEnabled = true;
-            this.cmbGirisKullanici.Items.AddRange(new object[] {
-            "Admin Girişi",
-            "Alıcı Girişi",
-            "Satıcı Girişi"});
-            this.cmbGirisKullanici.Location = new System.Drawing.Point(310, 175);
-            this.cmbGirisKullanici.Name = "cmbGirisKullanici";
-            this.cmbGirisKullanici.Size = new System.Drawing.Size(146, 24);
-            this.cmbGirisKullanici.TabIndex = 29;
-            this.cmbGirisKullanici.SelectedIndexChanged += new System.EventHandler(this.cmbGirisKullanici_SelectedIndexChanged);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(206, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 17);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Kullanıcı adı";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 465);
-            this.Controls.Add(this.cmbGirisKullanici);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtKullaniciAd);
+            this.Controls.Add(this.txtsifre);
             this.Controls.Add(this.btnGirisGirisYap);
             this.Name = "Giris";
             this.Text = "GirisEkrani";
@@ -115,9 +112,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnGirisGirisYap;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox cmbGirisKullanici;
+        private System.Windows.Forms.TextBox txtKullaniciAd;
+        private System.Windows.Forms.TextBox txtsifre;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -14,16 +14,16 @@ namespace WindowsFormsApp1
 {
     public partial class AliciEkrani : Form
     {
-        string anlikTc;
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-6LL8GP9;Initial Catalog=Project;Integrated Security=True");
+       // string anlikTc;
+      //  SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-6LL8GP9;Initial Catalog=Project;Integrated Security=True");
         public AliciEkrani()
         {
             InitializeComponent();
             
             KayitEkrani kayitEkrani = new KayitEkrani();
-            anlikTc= kayitEkrani.VeriAktarimi();
-            DataGridBakiyeDoldurma();
-            DataGridTUmUrunlerDoldurma();
+           // anlikTc= kayitEkrani.VeriAktarimi();
+           // DataGridBakiyeDoldurma();
+           // DataGridTUmUrunlerDoldurma();
             
             
 
@@ -32,13 +32,13 @@ namespace WindowsFormsApp1
         
         private void btnAliciEkle_Click(object sender, EventArgs e)
         {
-            baglanti.Open();    //store proc
+           /* baglanti.Open();    //store proc
             SqlCommand komut = new SqlCommand("SanalBakiyeEkle", baglanti);
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@kullaniciTc",anlikTc.Trim() );
             komut.Parameters.AddWithValue("@kullaniciBakiye", txtAliciBakiye.Text.Trim());
             komut.ExecuteNonQuery();
-            baglanti.Close();
+            baglanti.Close();*/
 
 
         }
@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
        
         private void btnAliciUrunGoster_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
+           /* baglanti.Open();
             SqlCommand komut = new SqlCommand("UrunListeleme", baglanti);
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@urunIsmi",txtAliciUrunAdi.Text.Trim());
@@ -54,14 +54,14 @@ namespace WindowsFormsApp1
             DataTable dt = new DataTable();  // tablo olusturarak
             da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
             dataUrun.DataSource = dt;        // bu tablo uı da gosterılır 
-            baglanti.Close();
+            baglanti.Close();*/
         }
         private void btnAliciAl_Click(object sender, EventArgs e)
         {
-            // buarda admın ıcın sanal alıcı tablosuna gıdıcek
+          /**  // buarda admın ıcın sanal alıcı tablosuna gıdıcek
             baglanti.Open();
             SqlCommand komut = new SqlCommand("UrunListeleme", baglanti); 
-            baglanti.Close();
+            baglanti.Close();*/
         }
 
 
@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
 
         //******************************************************************************************
 
-        public void DataGridBakiyeDoldurma()
+       /* public void DataGridBakiyeDoldurma()
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand(" select* from tblBakiye", baglanti);
@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
             da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
             dataGridTumUrunler.DataSource = dt;        // bu tablo uı da gosterılır 
             baglanti.Close();
-        }
+        }*/
 
        
     }
