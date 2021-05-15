@@ -12,33 +12,22 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
+    
     public partial class AliciEkrani : Form
     {
-       // string anlikTc;
-      //  SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-6LL8GP9;Initial Catalog=Project;Integrated Security=True");
-        public AliciEkrani()
+        int userId;
+        public AliciEkrani(int id)
         {
+            userId = id;
             InitializeComponent();
-            
-            KayitEkrani kayitEkrani = new KayitEkrani();
-           // anlikTc= kayitEkrani.VeriAktarimi();
-           // DataGridBakiyeDoldurma();
-           // DataGridTUmUrunlerDoldurma();
-            
-            
-
             
         }
         
         private void btnAliciEkle_Click(object sender, EventArgs e)
         {
-           /* baglanti.Open();    //store proc
-            SqlCommand komut = new SqlCommand("SanalBakiyeEkle", baglanti);
-            komut.CommandType = CommandType.StoredProcedure;
-            komut.Parameters.AddWithValue("@kullaniciTc",anlikTc.Trim() );
-            komut.Parameters.AddWithValue("@kullaniciBakiye", txtAliciBakiye.Text.Trim());
-            komut.ExecuteNonQuery();
-            baglanti.Close();*/
+
+
+         
 
 
         }
@@ -64,32 +53,47 @@ namespace WindowsFormsApp1
             baglanti.Close();*/
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AnaEkran anaEkran = new AnaEkran(userId);
+            anaEkran.Show();
+            this.Hide();
+        }
+
 
 
 
         //******************************************************************************************
 
-       /* public void DataGridBakiyeDoldurma()
-        {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand(" select* from tblBakiye", baglanti);
-            SqlDataAdapter da = new SqlDataAdapter(komut); // databaseden verilerin aktarılır
-            DataTable dt = new DataTable();  // tablo olusturarak
-            da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
-            dataGridBakiye.DataSource = dt;        // bu tablo uı da gosterılır 
-            baglanti.Close();
-        }
-        public void DataGridTUmUrunlerDoldurma()
-        {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand(" select* from viewUrunler", baglanti);
-            SqlDataAdapter da = new SqlDataAdapter(komut); // databaseden verilerin aktarılır
-            DataTable dt = new DataTable();  // tablo olusturarak
-            da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
-            dataGridTumUrunler.DataSource = dt;        // bu tablo uı da gosterılır 
-            baglanti.Close();
-        }*/
+        /* public void DataGridBakiyeDoldurma()
+         {
+             baglanti.Open();
+             SqlCommand komut = new SqlCommand(" select* from tblBakiye", baglanti);
+             SqlDataAdapter da = new SqlDataAdapter(komut); // databaseden verilerin aktarılır
+             DataTable dt = new DataTable();  // tablo olusturarak
+             da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
+             dataGridBakiye.DataSource = dt;        // bu tablo uı da gosterılır 
+             baglanti.Close();
+         }
+         public void DataGridTUmUrunlerDoldurma()
+         {
+             baglanti.Open();
+             SqlCommand komut = new SqlCommand(" select* from viewUrunler", baglanti);
+             SqlDataAdapter da = new SqlDataAdapter(komut); // databaseden verilerin aktarılır
+             DataTable dt = new DataTable();  // tablo olusturarak
+             da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
+             dataGridTumUrunler.DataSource = dt;        // bu tablo uı da gosterılır 
+             baglanti.Close();
+         }*/
 
-       
+        /* baglanti.Open();    //store proc
+          SqlCommand komut = new SqlCommand("SanalBakiyeEkle", baglanti);
+          komut.CommandType = CommandType.StoredProcedure;
+          komut.Parameters.AddWithValue("@kullaniciTc",anlikTc.Trim() );
+          komut.Parameters.AddWithValue("@kullaniciBakiye", txtAliciBakiye.Text.Trim());
+          komut.ExecuteNonQuery();
+          baglanti.Close();*/
+
+
     }
 }

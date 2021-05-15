@@ -30,6 +30,8 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridTumUrunler = new System.Windows.Forms.DataGridView();
             this.btnAliciAl = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,13 +42,12 @@ namespace WindowsFormsApp1
             this.btnAliciEkle = new System.Windows.Forms.Button();
             this.txtAliciBakiye = new System.Windows.Forms.TextBox();
             this.dataGridBakiye = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridTumUrunler = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridBakiye)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTumUrunler)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBakiye)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -58,12 +59,33 @@ namespace WindowsFormsApp1
             this.groupBox5.Controls.Add(this.btnAliciUrunGoster);
             this.groupBox5.Controls.Add(this.textBox2);
             this.groupBox5.Controls.Add(this.txtAliciUrunAdi);
-            this.groupBox5.Location = new System.Drawing.Point(51, 193);
+            this.groupBox5.Location = new System.Drawing.Point(51, 214);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(864, 315);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "groupBox5";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridTumUrunler);
+            this.groupBox2.Location = new System.Drawing.Point(308, 21);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(526, 267);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tüm Ürünler";
+            // 
+            // dataGridTumUrunler
+            // 
+            this.dataGridTumUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTumUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridTumUrunler.Location = new System.Drawing.Point(3, 18);
+            this.dataGridTumUrunler.Name = "dataGridTumUrunler";
+            this.dataGridTumUrunler.RowHeadersWidth = 51;
+            this.dataGridTumUrunler.RowTemplate.Height = 24;
+            this.dataGridTumUrunler.Size = new System.Drawing.Size(520, 246);
+            this.dataGridTumUrunler.TabIndex = 0;
             // 
             // btnAliciAl
             // 
@@ -122,7 +144,7 @@ namespace WindowsFormsApp1
             this.groupBox4.Controls.Add(this.btnAliciEkle);
             this.groupBox4.Controls.Add(this.txtAliciBakiye);
             this.groupBox4.Controls.Add(this.dataGridBakiye);
-            this.groupBox4.Location = new System.Drawing.Point(51, 33);
+            this.groupBox4.Location = new System.Drawing.Point(51, 54);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(852, 154);
             this.groupBox4.TabIndex = 7;
@@ -156,43 +178,33 @@ namespace WindowsFormsApp1
             this.dataGridBakiye.Size = new System.Drawing.Size(526, 117);
             this.dataGridBakiye.TabIndex = 0;
             // 
-            // groupBox2
+            // button1
             // 
-            this.groupBox2.Controls.Add(this.dataGridTumUrunler);
-            this.groupBox2.Location = new System.Drawing.Point(308, 21);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(526, 267);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tüm Ürünler";
-            // 
-            // dataGridTumUrunler
-            // 
-            this.dataGridTumUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTumUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridTumUrunler.Location = new System.Drawing.Point(3, 18);
-            this.dataGridTumUrunler.Name = "dataGridTumUrunler";
-            this.dataGridTumUrunler.RowHeadersWidth = 51;
-            this.dataGridTumUrunler.RowTemplate.Height = 24;
-            this.dataGridTumUrunler.Size = new System.Drawing.Size(520, 246);
-            this.dataGridTumUrunler.TabIndex = 0;
+            this.button1.Location = new System.Drawing.Point(12, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 25);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Geri";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AliciEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 531);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Name = "AliciEkrani";
             this.Text = "AliciEkrani";
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTumUrunler)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBakiye)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridTumUrunler)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,5 +224,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAliciAl;
+        private System.Windows.Forms.Button button1;
     }
 }

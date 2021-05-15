@@ -49,13 +49,7 @@ namespace WindowsFormsApp1
         }
 
       //------------------------------------------------------------------------------------------------------------------------
-       /* string anlikTc = "2";
-        public string VeriAktarimi()
-        {
-            anlikTc = txtKayitTc.Text;
-            return anlikTc;
-
-        }
+       /*
         public void Fonksiyonlar()
         {
             //baglanti.Open();    //store proc

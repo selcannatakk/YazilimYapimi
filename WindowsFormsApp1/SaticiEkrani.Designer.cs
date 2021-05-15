@@ -41,21 +41,22 @@ namespace WindowsFormsApp1
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.txtBakiye = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblBakiyeMiktar = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView2);
-            this.groupBox2.Location = new System.Drawing.Point(455, 196);
+            this.groupBox2.Location = new System.Drawing.Point(455, 253);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(486, 316);
+            this.groupBox2.Size = new System.Drawing.Size(486, 259);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Urun remi gelirse ";
@@ -68,7 +69,7 @@ namespace WindowsFormsApp1
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(480, 295);
+            this.dataGridView2.Size = new System.Drawing.Size(480, 238);
             this.dataGridView2.TabIndex = 0;
             // 
             // groupBox3
@@ -80,12 +81,11 @@ namespace WindowsFormsApp1
             this.groupBox3.Controls.Add(this.textBox4);
             this.groupBox3.Controls.Add(this.textBox5);
             this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Location = new System.Drawing.Point(22, 181);
+            this.groupBox3.Location = new System.Drawing.Point(22, 253);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(401, 331);
+            this.groupBox3.Size = new System.Drawing.Size(401, 259);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            //this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label3
             // 
@@ -122,7 +122,6 @@ namespace WindowsFormsApp1
             this.button3.TabIndex = 13;
             this.button3.Text = "Sat";
             this.button3.UseVisualStyleBackColor = true;
-          //  this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox4
             // 
@@ -130,7 +129,6 @@ namespace WindowsFormsApp1
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 10;
-          //  this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
@@ -149,8 +147,8 @@ namespace WindowsFormsApp1
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.button2);
-            this.groupBox7.Controls.Add(this.textBox8);
-            this.groupBox7.Location = new System.Drawing.Point(22, 23);
+            this.groupBox7.Controls.Add(this.txtBakiye);
+            this.groupBox7.Location = new System.Drawing.Point(32, 84);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(401, 147);
             this.groupBox7.TabIndex = 7;
@@ -167,31 +165,51 @@ namespace WindowsFormsApp1
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox8
+            // txtBakiye
             // 
-            this.textBox8.Location = new System.Drawing.Point(50, 41);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(122, 22);
-            this.textBox8.TabIndex = 10;
+            this.txtBakiye.Location = new System.Drawing.Point(50, 41);
+            this.txtBakiye.Name = "txtBakiye";
+            this.txtBakiye.Size = new System.Drawing.Size(122, 22);
+            this.txtBakiye.TabIndex = 10;
             // 
-            // dataGridView5
+            // label4
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(458, 25);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(480, 145);
-            this.dataGridView5.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(773, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 17);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "bakiye miktarınız";
+            // 
+            // lblBakiyeMiktar
+            // 
+            this.lblBakiyeMiktar.AutoSize = true;
+            this.lblBakiyeMiktar.Location = new System.Drawing.Point(905, 12);
+            this.lblBakiyeMiktar.Name = "lblBakiyeMiktar";
+            this.lblBakiyeMiktar.Size = new System.Drawing.Size(16, 17);
+            this.lblBakiyeMiktar.TabIndex = 16;
+            this.lblBakiyeMiktar.Text = "0";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 25);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "geri";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SaticiEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 541);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblBakiyeMiktar);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.groupBox7);
             this.Name = "SaticiEkrani";
             this.Text = "SaticiEkrani";
@@ -201,8 +219,8 @@ namespace WindowsFormsApp1
             this.groupBox3.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -217,10 +235,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.TextBox txtBakiye;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblBakiyeMiktar;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SaticiEkrani saticiEkrani = new SaticiEkrani();
+            SaticiEkrani saticiEkrani = new SaticiEkrani(userId);
             saticiEkrani.Show();
             this.Hide();
             //label1.Text = userId.ToString();
@@ -30,8 +30,15 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AliciEkrani aliciEkrani = new AliciEkrani();
+            AliciEkrani aliciEkrani = new AliciEkrani(userId);
             aliciEkrani.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Giris giris = new Giris();
+            giris.Show();
             this.Hide();
         }
     }
