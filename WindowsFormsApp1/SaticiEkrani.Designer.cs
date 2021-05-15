@@ -36,9 +36,9 @@ namespace WindowsFormsApp1
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtFiyat = new System.Windows.Forms.TextBox();
+            this.txtMiktar = new System.Windows.Forms.TextBox();
+            this.txtAdi = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.txtBakiye = new System.Windows.Forms.TextBox();
@@ -78,9 +78,9 @@ namespace WindowsFormsApp1
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.txtFiyat);
+            this.groupBox3.Controls.Add(this.txtMiktar);
+            this.groupBox3.Controls.Add(this.txtAdi);
             this.groupBox3.Location = new System.Drawing.Point(22, 253);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(401, 259);
@@ -122,27 +122,28 @@ namespace WindowsFormsApp1
             this.button3.TabIndex = 13;
             this.button3.Text = "Sat";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox4
+            // txtFiyat
             // 
-            this.textBox4.Location = new System.Drawing.Point(182, 122);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 10;
+            this.txtFiyat.Location = new System.Drawing.Point(182, 122);
+            this.txtFiyat.Name = "txtFiyat";
+            this.txtFiyat.Size = new System.Drawing.Size(100, 22);
+            this.txtFiyat.TabIndex = 10;
             // 
-            // textBox5
+            // txtMiktar
             // 
-            this.textBox5.Location = new System.Drawing.Point(182, 77);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 9;
+            this.txtMiktar.Location = new System.Drawing.Point(182, 77);
+            this.txtMiktar.Name = "txtMiktar";
+            this.txtMiktar.Size = new System.Drawing.Size(100, 22);
+            this.txtMiktar.TabIndex = 9;
             // 
-            // textBox6
+            // txtAdi
             // 
-            this.textBox6.Location = new System.Drawing.Point(182, 36);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 8;
+            this.txtAdi.Location = new System.Drawing.Point(182, 36);
+            this.txtAdi.Name = "txtAdi";
+            this.txtAdi.Size = new System.Drawing.Size(100, 22);
+            this.txtAdi.TabIndex = 8;
             // 
             // groupBox7
             // 
@@ -171,7 +172,6 @@ namespace WindowsFormsApp1
             this.txtBakiye.Name = "txtBakiye";
             this.txtBakiye.Size = new System.Drawing.Size(122, 22);
             this.txtBakiye.TabIndex = 10;
-            //this.txtBakiye.TextChanged += new System.EventHandler(this.txtBakiye_TextChanged);
             // 
             // label4
             // 
@@ -231,9 +231,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtFiyat;
+        private System.Windows.Forms.TextBox txtMiktar;
+        private System.Windows.Forms.TextBox txtAdi;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtBakiye;

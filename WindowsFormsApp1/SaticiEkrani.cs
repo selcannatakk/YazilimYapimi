@@ -14,43 +14,33 @@ namespace WindowsFormsApp1
     public partial class SaticiEkrani : Form
     {
         int userId;
+      //  string saticiMoney;
         public SaticiEkrani(int id)
         {
             userId = id;
             InitializeComponent();
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
+        public void SaticiBakiye()
+        {
+            //int money;
+           // saticiMoney = txtBakiye.Text;
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand(@"insert into AdminMoney (UserID,Money) values(@userID,@money)",baglanti);
+            komut.Parameters.AddWithValue("@userID", userId);
+            komut.Parameters.AddWithValue("@money", txtBakiye.Text);
+            komut.ExecuteNonQuery();
 
+
+            baglanti.Close();
+            //txtFiyat.Text = saticiMoney;
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ////////////////////////////// ekleme işlemine bak 
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("select UserID From tblVirtualMoneys where UserID=@userID ", baglanti);
-            komut.Parameters.AddWithValue("@userID", userId);
+            // bakiye istek
 
-
-            SqlDataReader dr = komut.ExecuteReader();
-            if (dr.Read())
-            {
-                
-                //update
-                SqlCommand command = new SqlCommand(@"update tblVirtualMoneys set UserID=@userID , VirtualMoneyAmount=@virtualMoneyAmount ");
-                command.Parameters.AddWithValue("@userID", userId);
-                command.Parameters.AddWithValue("@virtualMoneyAmount", txtBakiye.Text);
-                MessageBox.Show("güncellendi id:"+userId+txtBakiye.Text);
-
-            }
-            else
-            {
-                MessageBox.Show("eklendi");
-                //insert
-                SqlCommand command = new SqlCommand(@"insert into tblVirtualMoneys (UserID,VirtualMoneyAmount) values(@userID , @virtualMoneyAmount) ");
-                command.Parameters.AddWithValue("@userID", userId);
-                command.Parameters.AddWithValue("@virtualMoneyAmount", txtBakiye.Text);
-
-            }
-            baglanti.Close();
+            SaticiBakiye();
         }
        
         private void button1_Click(object sender, EventArgs e)
@@ -61,5 +51,34 @@ namespace WindowsFormsApp1
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int productId;
+            baglanti.Open();
+            SqlCommand command=new SqlCommand(@"insert into tblProduct (ProductName,ProductAmount,ProductPrice,UserID) 
+            values(@productName,@productAmount,@productPrice,@userID)",baglanti);
+            command.Parameters.AddWithValue("@userID",userId);
+            command.Parameters.AddWithValue("@productName", txtAdi.Text);
+            command.Parameters.AddWithValue("@productAmount", txtMiktar.Text);
+            command.Parameters.AddWithValue("@productPrice", txtFiyat.Text);
+            command.ExecuteNonQuery();
+            MessageBox.Show("urun eklendi");
+            baglanti.Close();
+            baglanti.Open();
+
+            SqlCommand komut = new SqlCommand(@"select P.ProductID from tblUsers U inner join tblProduct P on U.UserID=P.UserID ",baglanti);
+            SqlDataReader dr = komut.ExecuteReader();
+            if (dr.Read())
+            {
+                productId = Convert.ToInt32(dr["ProductID"]);
+                MessageBox.Show("urun id:" + productId);
+            }
+            else
+            {
+                MessageBox.Show("urun id alınamadı");
+            }
+
+            baglanti.Close();
+        }
     }
 }

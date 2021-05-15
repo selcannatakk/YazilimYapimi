@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             baglanti.Open();
-            SqlCommand komut = new SqlCommand(@" select* from tblVirtualMoneys", baglanti);
+            SqlCommand komut = new SqlCommand(@" select* from AdminMoney", baglanti);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -37,5 +37,19 @@ namespace WindowsFormsApp1
         {
 
         }
-    }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Giris giris = new Giris();
+            giris.Show();
+            giris.Hide();
+        }
+
+        private void dataGridBakiyeOnay_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilialan = dataGridBakiyeOnay.SelectedCells[0].RowIndex;
+            label1.Text = dataGridBakiyeOnay.Rows[secilialan].Cells[0].Value.ToString();
+            label2.Text = dataGridBakiyeOnay.Rows[secilialan].Cells[1].Value.ToString();
+        }
+}
 }

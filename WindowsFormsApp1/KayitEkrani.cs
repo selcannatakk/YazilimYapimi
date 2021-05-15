@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
-        
+       
         private void btnKayitGirisYap_Click(object sender, EventArgs e)
         {
             Giris giris = new Giris();
@@ -30,8 +30,8 @@ namespace WindowsFormsApp1
         {
             baglanti.Open();    //store proc
             SqlCommand komut = new SqlCommand(
-             "insert into tblUsers( UserID,UserName,UserSurName,UserLogin_Name,User_TC_Number,Tel_Number,Address,E_Mail,Password)" +
-             "values (@userID,@userName, @userSurName, @userLogin_Name, @user_TC_Number, @tel_Number, @address, @e_Mail, @password)", baglanti);
+             "insert into tblUsers( UserName,UserSurName,UserLogin_Name,User_TC_Number,Tel_Number,Address,E_Mail,Password)" +
+             "values (@userName, @userSurName, @userLogin_Name, @user_TC_Number, @tel_Number, @address, @e_Mail, @password)", baglanti);
             komut.Parameters.AddWithValue("@userName", txtKayitAd.Text);
             komut.Parameters.AddWithValue("@userSurName", txtKayitSoyad.Text);
             komut.Parameters.AddWithValue("@userLogin_Name", txtKayitKullaniciAd.Text);

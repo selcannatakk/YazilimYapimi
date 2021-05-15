@@ -37,6 +37,9 @@ namespace WindowsFormsApp1
             this.btnKayitGirisYap = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -84,10 +87,11 @@ namespace WindowsFormsApp1
             this.dataGridBakiyeOnay.RowTemplate.Height = 24;
             this.dataGridBakiyeOnay.Size = new System.Drawing.Size(343, 136);
             this.dataGridBakiyeOnay.TabIndex = 0;
+            this.dataGridBakiyeOnay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridBakiyeOnay_CellClick);
             // 
             // btnKayitKayitOl
             // 
-            this.btnKayitKayitOl.Location = new System.Drawing.Point(424, 211);
+            this.btnKayitKayitOl.Location = new System.Drawing.Point(417, 283);
             this.btnKayitKayitOl.Name = "btnKayitKayitOl";
             this.btnKayitKayitOl.Size = new System.Drawing.Size(145, 28);
             this.btnKayitKayitOl.TabIndex = 13;
@@ -97,7 +101,7 @@ namespace WindowsFormsApp1
             // 
             // btnKayitGirisYap
             // 
-            this.btnKayitGirisYap.Location = new System.Drawing.Point(592, 211);
+            this.btnKayitGirisYap.Location = new System.Drawing.Point(585, 283);
             this.btnKayitGirisYap.Name = "btnKayitGirisYap";
             this.btnKayitGirisYap.Size = new System.Drawing.Size(132, 28);
             this.btnKayitGirisYap.TabIndex = 12;
@@ -122,11 +126,42 @@ namespace WindowsFormsApp1
             this.button2.Text = "onay";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(328, 382);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(128, 28);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "geri";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(530, 217);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(614, 217);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "label2";
+            // 
             // AdminEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnKayitKayitOl);
@@ -141,6 +176,7 @@ namespace WindowsFormsApp1
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBakiyeOnay)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -154,5 +190,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnKayitGirisYap;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
