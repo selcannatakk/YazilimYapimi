@@ -17,19 +17,10 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+       
+        private void button2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            // buarada admın ıcın sanal satılıga gıdıcek 
         }
     }
 }

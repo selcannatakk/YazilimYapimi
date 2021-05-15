@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
             this.groupBox3.Size = new System.Drawing.Size(401, 331);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            //this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label3
             // 
@@ -122,7 +122,7 @@ namespace WindowsFormsApp1
             this.button3.TabIndex = 13;
             this.button3.Text = "Sat";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+          //  this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox4
             // 
@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 10;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+          //  this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
@@ -165,6 +165,7 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 12;
             this.button2.Text = "Ekle";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox8
             // 
