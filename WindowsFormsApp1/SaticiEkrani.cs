@@ -24,12 +24,33 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //////////////////////////////// ekleme işlemine bak 
-            //baglanti.Open();
-            //SqlCommand command = new SqlCommand(@"insert into tblVirtualMoneys (UserID,VirtualMoneyAmount) values(@userID,@virtualMoneyAmount)",baglanti);
-            //command.Parameters.AddWithValue("@userID", userId.ToString());
-            //command.Parameters.AddWithValue("@virtualMoneyAmount", txtBakiye.Text);
-            //baglanti.Close();
+            ////////////////////////////// ekleme işlemine bak 
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select UserID From tblVirtualMoneys where UserID=@userID ", baglanti);
+            komut.Parameters.AddWithValue("@userID", userId);
+
+
+            SqlDataReader dr = komut.ExecuteReader();
+            if (dr.Read())
+            {
+                
+                //update
+                SqlCommand command = new SqlCommand(@"update tblVirtualMoneys set UserID=@userID , VirtualMoneyAmount=@virtualMoneyAmount ");
+                command.Parameters.AddWithValue("@userID", userId);
+                command.Parameters.AddWithValue("@virtualMoneyAmount", txtBakiye.Text);
+                MessageBox.Show("güncellendi id:"+userId+txtBakiye.Text);
+
+            }
+            else
+            {
+                MessageBox.Show("eklendi");
+                //insert
+                SqlCommand command = new SqlCommand(@"insert into tblVirtualMoneys (UserID,VirtualMoneyAmount) values(@userID , @virtualMoneyAmount) ");
+                command.Parameters.AddWithValue("@userID", userId);
+                command.Parameters.AddWithValue("@virtualMoneyAmount", txtBakiye.Text);
+
+            }
+            baglanti.Close();
         }
        
         private void button1_Click(object sender, EventArgs e)
@@ -39,5 +60,6 @@ namespace WindowsFormsApp1
             this.Hide();
 
         }
+
     }
 }

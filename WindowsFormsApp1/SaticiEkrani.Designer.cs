@@ -171,6 +171,7 @@ namespace WindowsFormsApp1
             this.txtBakiye.Name = "txtBakiye";
             this.txtBakiye.Size = new System.Drawing.Size(122, 22);
             this.txtBakiye.TabIndex = 10;
+            //this.txtBakiye.TextChanged += new System.EventHandler(this.txtBakiye_TextChanged);
             // 
             // label4
             // 
