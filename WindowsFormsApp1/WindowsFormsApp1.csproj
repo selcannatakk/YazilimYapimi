@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs">
+    <Compile Include="AdminEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin.Designer.cs">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <Compile Include="AdminEkrani.Designer.cs">
+      <DependentUpon>AdminEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="AliciEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AliciEkrani.Designer.cs">
       <DependentUpon>AliciEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaEkran.Designer.cs">
+      <DependentUpon>AnaEkran.cs</DependentUpon>
     </Compile>
     <Compile Include="ProjetsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -89,11 +95,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin.resx">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <Compile Include="UserAdmin.cs" />
+    <EmbeddedResource Include="AdminEkrani.resx">
+      <DependentUpon>AdminEkrani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AliciEkrani.resx">
       <DependentUpon>AliciEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaEkran.resx">
+      <DependentUpon>AnaEkran.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaticiEkrani.resx">
       <DependentUpon>SaticiEkrani.cs</DependentUpon>

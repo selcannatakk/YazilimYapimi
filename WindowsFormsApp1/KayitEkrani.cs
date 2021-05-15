@@ -30,8 +30,8 @@ namespace WindowsFormsApp1
         {
             baglanti.Open();    //store proc
             SqlCommand komut = new SqlCommand(
-             "insert into tblUsers(UserName,UserSurName,UserLogin_Name,User_TC_Number,Tel_Number,Address,E_Mail,Password)" +
-             "values (@userName, @userSurName, @userLogin_Name, @user_TC_Number, @tel_Number, @address, @e_Mail, @password)", baglanti);
+             "insert into tblUsers( UserID,UserName,UserSurName,UserLogin_Name,User_TC_Number,Tel_Number,Address,E_Mail,Password)" +
+             "values (@userID,@userName, @userSurName, @userLogin_Name, @user_TC_Number, @tel_Number, @address, @e_Mail, @password)", baglanti);
             komut.Parameters.AddWithValue("@userName", txtKayitAd.Text);
             komut.Parameters.AddWithValue("@userSurName", txtKayitSoyad.Text);
             komut.Parameters.AddWithValue("@userLogin_Name", txtKayitKullaniciAd.Text);
@@ -40,7 +40,9 @@ namespace WindowsFormsApp1
             komut.Parameters.AddWithValue("@address", txtKayitAdres.Text);
             komut.Parameters.AddWithValue("@e_Mail", txtKayitMail.Text);
             komut.Parameters.AddWithValue("@password", txtKayitSifre.Text);
+
             komut.ExecuteNonQuery();
+
             baglanti.Close();
 
 

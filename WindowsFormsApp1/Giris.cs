@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Giris : Form
     {
+        
         public Giris()
         {
             InitializeComponent();
@@ -20,72 +21,51 @@ namespace WindowsFormsApp1
         SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
         private void btnGirisGirisYap_Click(object sender, EventArgs e)
         {
-           // baglanti.Open();
+            UserAdmin userAdmin = new UserAdmin();
 
-           // SqlParameter[] parameters = new SqlParameter[]
-           //{
-           //      new SqlParameter("@Username",SqlDbType.NVarChar),
-           //      new SqlParameter("@Password",SqlDbType.NVarChar)
-           //};
-           //  parameters[0].Value = txtKullaniciAd.Text;
-           //  parameters[1].Value = txtsifre.Text;
+            int id;
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select UserID From tblUsers where UserLogin_Name=@Username AND Password=@Password", baglanti);
+            komut.Parameters.AddWithValue("@Username", txtKullaniciAd.Text);
+            komut.Parameters.AddWithValue("@Password", txtsifre.Text);
             
-           // SqlCommand komut = new SqlCommand("select * From tblUsers where UserName=@Username AND Password=@Password", baglanti);
-           // SqlDataReader dr = komut.ExecuteReader();
-           // if (dr.Read())
-           //  {
-           //     MessageBox.Show("gtbhd");
-           //  }
-           //  else
-           //  {
-           //      MessageBox.Show("UserName or Pasword invalid!");
+            SqlDataReader dr = komut.ExecuteReader();
+            if (dr.Read())
+            {
+               
+                id = Convert.ToInt32(dr["UserID"]);
+                MessageBox.Show("giriş yapıldı id:" + id);
+                AnaEkran anaEkran = new AnaEkran(id);
+                anaEkran.Show();
+                this.Hide();
 
-           //  }
-           // baglanti.Close();
 
-           // /*id donucek*/
-           // baglanti.Open();
-           // SqlCommand command = new SqlCommand("select UserID *from tblUsers where UserLogin_Name = @userLogin_Name and Password=@password", baglanti);
-           ////abel5.Text = command.ToString();
-           // SqlDataReader usersData = command.ExecuteReader();
-           // if (usersData.Read())
-           // {
-           //     label5.Text= usersData["UserID"].ToString();
-           // }
-           // else
-           // {
+                
+            }
+            else if (txtsifre.Text == "demet" && txtKullaniciAd.Text == "demet")
+            {
 
-           // }
+                AdminEkrani adminEkrani = new AdminEkrani();
+                adminEkrani.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("yanlıs sıfre veya kulanıcı adı");
+
+            }
+             baglanti.Close();
             
-           // baglanti.Close();
 
-            //baglanti.Open();    //store proc
-            //SqlCommand command = new SqlCommand(@"exec userLogin ", baglanti);
-            //command.CommandType = CommandType.StoredProcedure;
-            //command.Parameters.AddWithValue("@Username", txtKullaniciAd.Text.Trim());
-            //command.Parameters.AddWithValue("@Password", txtsifre.Text.Trim());
 
-           
-           //ataTable dataTable = usersData.HasRows.ToString();
 
-            //    if (dataTable.Rows.Count>0)
-            //    {
-            //        //giris
-            //        SqlCommand komut SqlCommand("select UserID *from tblUsers where UserLogin_Name = @userLogin_Name and Password=@password", baglanti);
-            //        label5.Text = komut.ExecuteNonQuery();
-
-            //    }
-            //    else
-            //    {
-
-            //    }
-
-            //    baglanti.Close();
         }
 
         private void cmbGirisKullanici_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+    
     }
 }
