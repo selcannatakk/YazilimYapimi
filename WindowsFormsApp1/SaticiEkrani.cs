@@ -25,11 +25,11 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             //////////////////////////////// ekleme işlemine bak 
-            baglanti.Open();
-            SqlCommand command = new SqlCommand(@"insert into tblVirtualMoneys (UserID,VirtualMoneyAmount) values(@userID,@virtualMoneyAmount)",baglanti);
-            command.Parameters.AddWithValue("@userID", userId.ToString());
-            command.Parameters.AddWithValue("@virtualMoneyAmount", txtBakiye.Text);
-            baglanti.Close();
+            //baglanti.Open();
+            //SqlCommand command = new SqlCommand(@"insert into tblVirtualMoneys (UserID,VirtualMoneyAmount) values(@userID,@virtualMoneyAmount)",baglanti);
+            //command.Parameters.AddWithValue("@userID", userId.ToString());
+            //command.Parameters.AddWithValue("@virtualMoneyAmount", txtBakiye.Text);
+            //baglanti.Close();
         }
        
         private void button1_Click(object sender, EventArgs e)
