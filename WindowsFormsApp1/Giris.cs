@@ -19,7 +19,19 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-7GMMT8H;Initial Catalog=Projets;Integrated Security=True");
-        private void btnGirisGirisYap_Click(object sender, EventArgs e)
+       
+
+        private void cmbGirisKullanici_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnGirisGirisYap_Click_1(object sender, EventArgs e)
         {
             UserAdmin userAdmin = new UserAdmin();
 
@@ -28,11 +40,11 @@ namespace WindowsFormsApp1
             SqlCommand komut = new SqlCommand("select UserID From tblUsers where UserLogin_Name=@Username AND Password=@Password", baglanti);
             komut.Parameters.AddWithValue("@Username", txtKullaniciAd.Text);
             komut.Parameters.AddWithValue("@Password", txtsifre.Text);
-            
+
             SqlDataReader dr = komut.ExecuteReader();
             if (dr.Read())
             {
-               
+
                 id = Convert.ToInt32(dr["UserID"]);
                 MessageBox.Show("giriş yapıldı id:" + id);
                 AnaEkran anaEkran = new AnaEkran(id);
@@ -40,7 +52,7 @@ namespace WindowsFormsApp1
                 this.Hide();
 
 
-                
+
             }
             else if (txtsifre.Text == "demet" && txtKullaniciAd.Text == "demet")
             {
@@ -54,18 +66,8 @@ namespace WindowsFormsApp1
                 MessageBox.Show("yanlıs sıfre veya kulanıcı adı");
 
             }
-             baglanti.Close();
-            
-
-
+            baglanti.Close();
 
         }
-
-        private void cmbGirisKullanici_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-    
     }
 }
