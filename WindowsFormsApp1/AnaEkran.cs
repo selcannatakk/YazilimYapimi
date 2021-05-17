@@ -14,10 +14,18 @@ namespace WindowsFormsApp1
     public partial class AnaEkran : Form
     {
         int userId;
+        int moneyState;
+        SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
+
         public AnaEkran(int id)
         {
             userId = id;
+            //moneyState = state;
+            //label1.Text = state.ToString();
+            
             InitializeComponent();
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -14,35 +14,21 @@ namespace WindowsFormsApp1
     public partial class SaticiEkrani : Form
     {
         int userId;
-      //  string saticiMoney;
+        SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
+
+        //  string saticiMoney;
         public SaticiEkrani(int id)
         {
             userId = id;
+            
+            
+            
             InitializeComponent();
-        }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-7GMMT8H;Initial Catalog=Projets;Integrated Security=True");
-        public void SaticiBakiye()
-        {
-            //int money;
-           // saticiMoney = txtBakiye.Text;
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand(@"insert into AdminMoney (UserID,Money) values(@userID,@money)",baglanti);
-            komut.Parameters.AddWithValue("@userID", userId);
-            komut.Parameters.AddWithValue("@money", txtBakiye.Text);
-            komut.ExecuteNonQuery();
-
-
-            baglanti.Close();
-            //txtFiyat.Text = saticiMoney;
+          
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // bakiye istek
 
-            SaticiBakiye();
-        }
-       
+
         private void button1_Click(object sender, EventArgs e)
         {
             AnaEkran anaEkran = new AnaEkran(userId);
@@ -53,7 +39,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int productId;
+            
             baglanti.Open();
             SqlCommand command=new SqlCommand(@"insert into tblProduct (ProductName,ProductAmount,ProductPrice,UserID) 
             values(@productName,@productAmount,@productPrice,@userID)",baglanti);
@@ -66,19 +52,27 @@ namespace WindowsFormsApp1
             baglanti.Close();
             baglanti.Open();
 
-            SqlCommand komut = new SqlCommand(@"select P.ProductID from tblUsers U inner join tblProduct P on U.UserID=P.UserID ",baglanti);
-            SqlDataReader dr = komut.ExecuteReader();
-            if (dr.Read())
-            {
-                productId = Convert.ToInt32(dr["ProductID"]);
-                MessageBox.Show("urun id:" + productId);
-            }
-            else
-            {
-                MessageBox.Show("urun id alınamadı");
-            }
+          
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("insert into AdminMoney (Money,UserID) values (@Money, @UserID) ", baglanti);
+            komut.Parameters.AddWithValue("@Money", txtBakiye.Text);
+            komut.Parameters.AddWithValue("@UserID", userId);
+            komut.ExecuteNonQuery();
             baglanti.Close();
+        }
+
+        private void SaticiEkrani_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridBakiyeOnay_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

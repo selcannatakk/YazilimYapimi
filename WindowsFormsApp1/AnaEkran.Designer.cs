@@ -29,42 +29,17 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridTumUrunler = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridTumUrunler)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridTumUrunler);
-            this.groupBox2.Location = new System.Drawing.Point(42, 104);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(671, 225);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tüm Ürünler";
-            // 
-            // dataGridTumUrunler
-            // 
-            this.dataGridTumUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTumUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridTumUrunler.Location = new System.Drawing.Point(3, 18);
-            this.dataGridTumUrunler.Name = "dataGridTumUrunler";
-            this.dataGridTumUrunler.RowHeadersWidth = 51;
-            this.dataGridTumUrunler.RowTemplate.Height = 24;
-            this.dataGridTumUrunler.Size = new System.Drawing.Size(665, 204);
-            this.dataGridTumUrunler.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(553, 12);
+            this.button1.Location = new System.Drawing.Point(32, 192);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 68);
+            this.button1.Size = new System.Drawing.Size(174, 68);
             this.button1.TabIndex = 17;
             this.button1.Text = "Satıcı İşlemleri";
             this.button1.UseVisualStyleBackColor = true;
@@ -72,7 +47,7 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(42, 12);
+            this.button2.Location = new System.Drawing.Point(32, 96);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 68);
             this.button2.TabIndex = 16;
@@ -83,7 +58,7 @@ namespace WindowsFormsApp1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(273, 44);
+            this.label1.Location = new System.Drawing.Point(85, 299);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 18;
@@ -108,20 +83,14 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox2);
             this.Name = "AnaEkran";
             this.Text = "AnaEkran";
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridTumUrunler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridTumUrunler;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;

@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-7GMMT8H;Initial Catalog=Projets;Integrated Security=True");
+       SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
        
 
         private void cmbGirisKullanici_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,6 +48,7 @@ namespace WindowsFormsApp1
                 id = Convert.ToInt32(dr["UserID"]);
                 MessageBox.Show("giriş yapıldı id:" + id);
                 AnaEkran anaEkran = new AnaEkran(id);
+                AdminEkrani adminEkrani = new AdminEkrani(id);
                 anaEkran.Show();
                 this.Hide();
 
@@ -56,8 +57,8 @@ namespace WindowsFormsApp1
             }
             else if (txtsifre.Text == "demet" && txtKullaniciAd.Text == "demet")
             {
-
-                AdminEkrani adminEkrani = new AdminEkrani();
+                id = 100;
+                AdminEkrani adminEkrani = new AdminEkrani(id);
                 adminEkrani.Show();
                 this.Hide();
             }
