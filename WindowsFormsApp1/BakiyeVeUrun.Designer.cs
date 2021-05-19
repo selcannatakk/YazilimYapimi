@@ -29,8 +29,6 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,36 +43,9 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.lblBakiyeMiktar = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridBakiyeOnay = new System.Windows.Forms.DataGridView();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridBakiyeOnay)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
-            this.groupBox2.Location = new System.Drawing.Point(455, 253);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(486, 259);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Urun remi gelirse ";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 18);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(480, 238);
-            this.dataGridView2.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -85,7 +56,7 @@ namespace WindowsFormsApp1
             this.groupBox3.Controls.Add(this.txtFiyat);
             this.groupBox3.Controls.Add(this.txtMiktar);
             this.groupBox3.Controls.Add(this.txtAdi);
-            this.groupBox3.Location = new System.Drawing.Point(22, 253);
+            this.groupBox3.Location = new System.Drawing.Point(12, 61);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(401, 259);
             this.groupBox3.TabIndex = 5;
@@ -153,7 +124,7 @@ namespace WindowsFormsApp1
             // 
             this.groupBox7.Controls.Add(this.button2);
             this.groupBox7.Controls.Add(this.txtBakiye);
-            this.groupBox7.Location = new System.Drawing.Point(32, 84);
+            this.groupBox7.Location = new System.Drawing.Point(452, 76);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(401, 147);
             this.groupBox7.TabIndex = 7;
@@ -205,60 +176,29 @@ namespace WindowsFormsApp1
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dataGridBakiyeOnay);
-            this.groupBox1.Location = new System.Drawing.Point(498, 84);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(349, 147);
-            this.groupBox1.TabIndex = 18;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "bakiye onay";
-            // 
-            // dataGridBakiyeOnay
-            // 
-            this.dataGridBakiyeOnay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridBakiyeOnay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridBakiyeOnay.Location = new System.Drawing.Point(3, 18);
-            this.dataGridBakiyeOnay.Name = "dataGridBakiyeOnay";
-            this.dataGridBakiyeOnay.RowHeadersWidth = 51;
-            this.dataGridBakiyeOnay.RowTemplate.Height = 24;
-            this.dataGridBakiyeOnay.Size = new System.Drawing.Size(343, 126);
-            this.dataGridBakiyeOnay.TabIndex = 0;
-            this.dataGridBakiyeOnay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridBakiyeOnay_CellContentClick);
-            // 
             // SaticiEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 541);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(962, 335);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblBakiyeMiktar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox7);
             this.Name = "SaticiEkrani";
             this.Text = "SaticiEkrani";
             this.Load += new System.EventHandler(this.SaticiEkrani_Load);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridBakiyeOnay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtFiyat;
@@ -273,7 +213,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblBakiyeMiktar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridBakiyeOnay;
     }
 }

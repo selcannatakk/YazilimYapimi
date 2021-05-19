@@ -47,9 +47,9 @@ namespace WindowsFormsApp1
 
                 id = Convert.ToInt32(dr["UserID"]);
                 MessageBox.Show("giriş yapıldı id:" + id);
-                AnaEkran anaEkran = new AnaEkran(id);
+                SaticiEkrani saticiEkrani = new SaticiEkrani(id);
                 AdminEkrani adminEkrani = new AdminEkrani(id);
-                anaEkran.Show();
+                saticiEkrani.Show();
                 this.Hide();
 
 
@@ -69,6 +69,13 @@ namespace WindowsFormsApp1
             }
             baglanti.Close();
 
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            KayitEkrani kayitEkrani = new KayitEkrani();
+            kayitEkrani.Show();
+            this.Hide();
         }
     }
 }

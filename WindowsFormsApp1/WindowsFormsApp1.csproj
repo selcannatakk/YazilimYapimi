@@ -55,28 +55,16 @@
     <Compile Include="AdminEkrani.Designer.cs">
       <DependentUpon>AdminEkrani.cs</DependentUpon>
     </Compile>
-    <Compile Include="AliciEkrani.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AliciEkrani.Designer.cs">
-      <DependentUpon>AliciEkrani.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AnaEkran.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnaEkran.Designer.cs">
-      <DependentUpon>AnaEkran.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProjetsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjetsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SaticiEkrani.cs">
+    <Compile Include="BakiyeVeUrun.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SaticiEkrani.Designer.cs">
-      <DependentUpon>SaticiEkrani.cs</DependentUpon>
+    <Compile Include="BakiyeVeUrun.Designer.cs">
+      <DependentUpon>BakiyeVeUrun.cs</DependentUpon>
     </Compile>
     <Compile Include="Giris.cs">
       <SubType>Form</SubType>
@@ -102,14 +90,8 @@
     <EmbeddedResource Include="AdminEkrani.resx">
       <DependentUpon>AdminEkrani.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AliciEkrani.resx">
-      <DependentUpon>AliciEkrani.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AnaEkran.resx">
-      <DependentUpon>AnaEkran.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SaticiEkrani.resx">
-      <DependentUpon>SaticiEkrani.cs</DependentUpon>
+    <EmbeddedResource Include="BakiyeVeUrun.resx">
+      <DependentUpon>BakiyeVeUrun.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>

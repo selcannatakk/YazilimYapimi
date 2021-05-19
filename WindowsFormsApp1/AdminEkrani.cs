@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System;
 
 namespace WindowsFormsApp1
 {
@@ -18,23 +19,10 @@ namespace WindowsFormsApp1
         SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
         public AdminEkrani(int id)
         {
-            userId = id;
+            
             InitializeComponent();
 
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand(@" select* from AdminMoney", baglanti);
-            SqlDataAdapter da = new SqlDataAdapter(komut);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridBakiyeOnay.DataSource = dt;
-
-            SqlCommand command = new SqlCommand(@" select* from tblProduct", baglanti);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-            dataGridUrunOnay.DataSource = dataTable;
-            baglanti.Close();
-            InitializeComponent();
+            
         }
        
 
@@ -48,53 +36,72 @@ namespace WindowsFormsApp1
       
        
 
-        private void btnKayitKayitOl_Click(object sender, EventArgs e)
-        {
-            bool state;
+        
 
-            baglanti.Open();
-            SqlCommand command = new SqlCommand(@"update AdminMoney set State=1 where UserID=@userID",baglanti);
-            command.Parameters.AddWithValue("@userID", txtUserID.Text);
-            command.ExecuteNonQuery();
-            MessageBox.Show("state=1");
-            
-            SqlCommand komut = new SqlCommand("select State From AdminMoney where UserID=@userID ", baglanti);
-            komut.Parameters.AddWithValue("@userID", txtUserID.Text);
-            SqlDataReader dr = komut.ExecuteReader();
-            if (dr.Read())
+       
+
+       
+
+        private void AdminEkrani_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'projetsDataSet.tblProduct' table. You can move, or remove it, as needed.
+            this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
+            // TODO: This line of code loads data into the 'projetsDataSet.AdminMoney' table. You can move, or remove it, as needed.
+            this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
+
+        }
+
+        private void guna2DataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            if (guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!= null)
             {
-                state= Convert.ToBoolean(dr["State"]);
-                MessageBox.Show("state"+state);
+                guna2DataGridView2.CurrentRow.Selected = true;
+                lblAdi.Text= guna2DataGridView2.Rows[e.RowIndex].Cells["productNameDataGridViewTextBoxColumn1"].FormattedValue.ToString();
+                lblUrunMiktar.Text = guna2DataGridView2.Rows[e.RowIndex].Cells["productAmountDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                lblurunFiyati.Text = guna2DataGridView2.Rows[e.RowIndex].Cells["productPriceDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                lblid.Text= guna2DataGridView2.Rows[e.RowIndex].Cells["userIDDataGridViewTextBoxColumn2"].FormattedValue.ToString();
             }
-            baglanti.Close();
-
-            // AnaEkran anaEkran = new AnaEkran(userId,1);
-
-
-            //SqlDataReader dataReader = command.ExecuteReader();
-            //if(dataReader.Read())
-            //{
-            //    moneyState = 1;
-            //}
-
-
-            baglanti.Close();
-
-            
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnUrunOnay_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
             baglanti.Open();
-            SqlCommand command = new SqlCommand(@"update tblProduct set State=1 where ProductID=@productID", baglanti);
-            command.Parameters.AddWithValue("@productID", Convert.ToInt32(txtId.Text));
-            command.ExecuteNonQuery();
+            SqlCommand komut = new SqlCommand( @"insert into tblProduct2 (ProductName,ProductAmount,ProductPrice,UserID) 
+            values(@productName,@productAmount,@productPrice,@userID)",baglanti);
+            komut.Parameters.AddWithValue("@productName", lblAdi.Text);
+            komut.Parameters.AddWithValue("@productAmount", Convert.ToInt32(lblUrunMiktar.Text));
+            komut.Parameters.AddWithValue("@productPrice",Convert.ToInt32(lblurunFiyati.Text));
+            komut.Parameters.AddWithValue("@userID", Convert.ToInt32(lblid.Text));
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Onay İşlemi Gerçekleşti.");
+            //delete unutma
+            
+        }
+
+        private void dataGridUrunOnay_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                lblua.Text = dataGridView1.Rows[e.RowIndex].Cells["User"].FormattedValue.ToString();
+                lblup.Text = dataGridView1.Rows[e.RowIndex].Cells["Money"].FormattedValue.ToString();
+               
+            }
+        }
+
+        private void btnbakiyeonay_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand(@"insert into tblAdminMoney2 (MoneyAmount,UserID) 
+            values(@moneyAmount,@userID)", baglanti);
+            komut.Parameters.AddWithValue("@moneyAmount", Convert.ToInt32(lblup.Text));
+            komut.Parameters.AddWithValue("@userID", Convert.ToInt32(lblua.Text));
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Onay İşlemi Gerçekleşti.");
+            //delete unutma
             baglanti.Close();
         }
     }
