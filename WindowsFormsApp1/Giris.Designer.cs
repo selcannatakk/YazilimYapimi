@@ -39,9 +39,9 @@ namespace WindowsFormsApp1
             this.btnGirisGirisYap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -81,14 +81,13 @@ namespace WindowsFormsApp1
             this.txtKullaniciAd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtKullaniciAd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtKullaniciAd.HoverState.Parent = this.txtKullaniciAd;
-            this.txtKullaniciAd.Location = new System.Drawing.Point(43, 175);
-            this.txtKullaniciAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKullaniciAd.Location = new System.Drawing.Point(32, 142);
             this.txtKullaniciAd.Name = "txtKullaniciAd";
             this.txtKullaniciAd.PasswordChar = '\0';
             this.txtKullaniciAd.PlaceholderText = "Kullanıcı Adı";
             this.txtKullaniciAd.SelectedText = "";
             this.txtKullaniciAd.ShadowDecoration.Parent = this.txtKullaniciAd;
-            this.txtKullaniciAd.Size = new System.Drawing.Size(267, 50);
+            this.txtKullaniciAd.Size = new System.Drawing.Size(200, 41);
             this.txtKullaniciAd.TabIndex = 32;
             // 
             // txtsifre
@@ -108,14 +107,13 @@ namespace WindowsFormsApp1
             this.txtsifre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtsifre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsifre.HoverState.Parent = this.txtsifre;
-            this.txtsifre.Location = new System.Drawing.Point(43, 233);
-            this.txtsifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtsifre.Location = new System.Drawing.Point(32, 189);
             this.txtsifre.Name = "txtsifre";
             this.txtsifre.PasswordChar = '\0';
             this.txtsifre.PlaceholderText = "Şifre";
             this.txtsifre.SelectedText = "";
             this.txtsifre.ShadowDecoration.Parent = this.txtsifre;
-            this.txtsifre.Size = new System.Drawing.Size(267, 50);
+            this.txtsifre.Size = new System.Drawing.Size(200, 41);
             this.txtsifre.TabIndex = 33;
             // 
             // guna2ToggleSwitch1
@@ -126,11 +124,10 @@ namespace WindowsFormsApp1
             this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.CheckedState.Parent = this.guna2ToggleSwitch1;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(45, 302);
-            this.guna2ToggleSwitch1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(34, 245);
             this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
             this.guna2ToggleSwitch1.ShadowDecoration.Parent = this.guna2ToggleSwitch1;
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(47, 25);
+            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(35, 20);
             this.guna2ToggleSwitch1.TabIndex = 34;
             this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -149,11 +146,10 @@ namespace WindowsFormsApp1
             this.btnGirisGirisYap.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGirisGirisYap.ForeColor = System.Drawing.Color.Black;
             this.btnGirisGirisYap.HoverState.Parent = this.btnGirisGirisYap;
-            this.btnGirisGirisYap.Location = new System.Drawing.Point(128, 329);
-            this.btnGirisGirisYap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGirisGirisYap.Location = new System.Drawing.Point(96, 267);
             this.btnGirisGirisYap.Name = "btnGirisGirisYap";
             this.btnGirisGirisYap.ShadowDecoration.Parent = this.btnGirisGirisYap;
-            this.btnGirisGirisYap.Size = new System.Drawing.Size(121, 55);
+            this.btnGirisGirisYap.Size = new System.Drawing.Size(91, 45);
             this.btnGirisGirisYap.TabIndex = 35;
             this.btnGirisGirisYap.Text = "Giriş Yap";
             this.btnGirisGirisYap.Click += new System.EventHandler(this.btnGirisGirisYap_Click_1);
@@ -166,11 +162,10 @@ namespace WindowsFormsApp1
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(956, 0);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Location = new System.Drawing.Point(717, 0);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(51, 37);
+            this.guna2Button1.Size = new System.Drawing.Size(38, 30);
             this.guna2Button1.TabIndex = 36;
             this.guna2Button1.Text = "X";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -183,38 +178,12 @@ namespace WindowsFormsApp1
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(909, 0);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button2.Location = new System.Drawing.Point(682, 0);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(51, 37);
+            this.guna2Button2.Size = new System.Drawing.Size(38, 30);
             this.guna2Button2.TabIndex = 37;
             this.guna2Button2.Text = "_";
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.BUGomv;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(408, -181);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(599, 773);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 31;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 37;
-            this.guna2PictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.dha2_2;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(43, 6);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(291, 124);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2PictureBox1.TabIndex = 30;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2Button3
             // 
@@ -227,21 +196,43 @@ namespace WindowsFormsApp1
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(133, 390);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button3.Location = new System.Drawing.Point(100, 317);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(107, 33);
+            this.guna2Button3.Size = new System.Drawing.Size(80, 27);
             this.guna2Button3.TabIndex = 38;
             this.guna2Button3.Text = "Kayıt Ol";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.BUGomv;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(301, -82);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(468, 517);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 31;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BorderRadius = 37;
+            this.guna2PictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.dha2_2;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(32, 5);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(218, 101);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2PictureBox1.TabIndex = 30;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // Giris
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(1001, 430);
+            this.ClientSize = new System.Drawing.Size(751, 349);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
@@ -252,7 +243,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "GirisEkrani";
@@ -266,7 +257,6 @@ namespace WindowsFormsApp1
         #endregion
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
@@ -276,6 +266,7 @@ namespace WindowsFormsApp1
         private Guna.UI2.WinForms.Guna2TextBox txtKullaniciAd;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
 

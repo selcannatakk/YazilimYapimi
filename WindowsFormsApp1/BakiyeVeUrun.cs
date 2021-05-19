@@ -20,40 +20,25 @@ namespace WindowsFormsApp1
         public SaticiEkrani(int id)
         {
             userId = id;
-            
-            
-            
             InitializeComponent();
-          
         }
 
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
             baglanti.Open();
-            SqlCommand command=new SqlCommand(@"insert into tblProduct (ProductName,ProductAmount,ProductPrice,UserID) 
-            values(@productName,@productAmount,@productPrice,@userID)",baglanti);
-            command.Parameters.AddWithValue("@userID",userId);
+            SqlCommand command = new SqlCommand(@"insert into tblProduct (ProductName,ProductAmount,ProductPrice,UserID) 
+            values(@productName,@productAmount,@productPrice,@userID)", baglanti);
+            command.Parameters.AddWithValue("@userID", userId);
             command.Parameters.AddWithValue("@productName", txtAdi.Text);
             command.Parameters.AddWithValue("@productAmount", txtMiktar.Text);
             command.Parameters.AddWithValue("@productPrice", txtFiyat.Text);
             command.ExecuteNonQuery();
-            MessageBox.Show("urun eklendi");
+            MessageBox.Show("Ürün Admin onayına gönderildi onaylandıktan sonra yayınlacaktır!");
             baglanti.Close();
             baglanti.Open();
-
-          
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into AdminMoney (Money,UserID) values (@Money, @UserID) ", baglanti);
@@ -61,16 +46,19 @@ namespace WindowsFormsApp1
             komut.Parameters.AddWithValue("@UserID", userId);
             komut.ExecuteNonQuery();
             baglanti.Close();
+        }     
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Hareketler Hareketler = new Hareketler(userId);
+            Hareketler.Show();
+            this.Hide();
         }
 
-        private void SaticiEkrani_Load(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void dataGridBakiyeOnay_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            Giris g = new Giris();
+            g.Show();
+            this.Hide();
         }
     }
 }

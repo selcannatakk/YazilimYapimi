@@ -86,6 +86,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserAdmin.cs" />
     <EmbeddedResource Include="AdminEkrani.resx">
       <DependentUpon>AdminEkrani.cs</DependentUpon>
@@ -104,14 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="ProjetsDataSet.xsc">
       <DependentUpon>ProjetsDataSet.xsd</DependentUpon>
@@ -138,10 +138,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\dha2_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\BUGomv.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dha2_2.png" />
+    <None Include="Resources\ürün.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geriiiiiii.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ONAY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ALIŞ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\çokluürün.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BAKİYE.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

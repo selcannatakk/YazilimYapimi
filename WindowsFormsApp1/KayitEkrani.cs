@@ -18,14 +18,15 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
-        private void btnKayitGirisYap_Click(object sender, EventArgs e)
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             Giris giris = new Giris();
             giris.Show();
             this.Hide();
-           
         }
-        private void btnKayitKayitOl_Click(object sender, EventArgs e)
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
             baglanti.Open();    //store proc
             SqlCommand komut = new SqlCommand(
@@ -45,22 +46,22 @@ namespace WindowsFormsApp1
             baglanti.Close();
 
             MessageBox.Show("Başarılı bir şekilde kaydoldunuz şimdi giriş yapabilirsiniz");
-                Giris giris = new Giris();
-                giris.Show();
-                this.Hide();
+            Giris giris = new Giris();
+            giris.Show();
+            this.Hide();
         }
 
-      //------------------------------------------------------------------------------------------------------------------------
-       /*
-        public void Fonksiyonlar()
-        {
-            //baglanti.Open();    //store proc
-            //SqlCommand komut = new SqlCommand(" select* from tblullanici", baglanti);
-            //SqlDataAdapter da = new SqlDataAdapter(komut); // databaseden verilerin aktarılır
-            //DataTable dt = new DataTable();  // tablo olusturarak
-            //da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
-            //dataGridView1.DataSource = dt;        // bu tablo uı da gosterılır 
-            //baglanti.Close();
-        }*/
+        //------------------------------------------------------------------------------------------------------------------------
+        /*
+         public void Fonksiyonlar()
+         {
+             //baglanti.Open();    //store proc
+             //SqlCommand komut = new SqlCommand(" select* from tblullanici", baglanti);
+             //SqlDataAdapter da = new SqlDataAdapter(komut); // databaseden verilerin aktarılır
+             //DataTable dt = new DataTable();  // tablo olusturarak
+             //da.Fill(dt);                     // verilen tabloya aktarılmasını saglıyoruz
+             //dataGridView1.DataSource = dt;        // bu tablo uı da gosterılır 
+             //baglanti.Close();
+         }*/
     }
 }

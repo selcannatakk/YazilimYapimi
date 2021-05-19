@@ -121,7 +121,25 @@
   <data name="BUGomv" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BUGomv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ALIŞ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ALIŞ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="çokluürün" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\çokluürün.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ürün" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ürün.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ONAY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ONAY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dha2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dha2_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="geriiiiiii" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\geriiiiiii.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BAKİYE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BAKİYE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

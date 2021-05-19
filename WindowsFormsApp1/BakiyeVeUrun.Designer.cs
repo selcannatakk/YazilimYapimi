@@ -29,189 +29,250 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txtFiyat = new System.Windows.Forms.TextBox();
-            this.txtMiktar = new System.Windows.Forms.TextBox();
-            this.txtAdi = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtBakiye = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblBakiyeMiktar = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox3.SuspendLayout();
-            this.groupBox7.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtAdi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFiyat = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBakiye = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.txtMiktar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
-            // groupBox3
+            // guna2Elipse1
             // 
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.txtFiyat);
-            this.groupBox3.Controls.Add(this.txtMiktar);
-            this.groupBox3.Controls.Add(this.txtAdi);
-            this.groupBox3.Location = new System.Drawing.Point(12, 61);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(401, 259);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
+            this.guna2Elipse1.TargetControl = this;
             // 
-            // label3
+            // guna2DragControl1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 17);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Ürün Birim Fiyatı";
+            this.guna2DragControl1.ContainerControl = this;
+            this.guna2DragControl1.TargetControl = this;
             // 
-            // label2
+            // guna2GradientButton1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 17);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Ürün Miktari";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Ürün Adı";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(193, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 25);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Sat";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // txtFiyat
-            // 
-            this.txtFiyat.Location = new System.Drawing.Point(182, 122);
-            this.txtFiyat.Name = "txtFiyat";
-            this.txtFiyat.Size = new System.Drawing.Size(100, 22);
-            this.txtFiyat.TabIndex = 10;
-            // 
-            // txtMiktar
-            // 
-            this.txtMiktar.Location = new System.Drawing.Point(182, 77);
-            this.txtMiktar.Name = "txtMiktar";
-            this.txtMiktar.Size = new System.Drawing.Size(100, 22);
-            this.txtMiktar.TabIndex = 9;
+            this.guna2GradientButton1.BorderRadius = 10;
+            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Yellow;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(66, 256);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Size = new System.Drawing.Size(126, 45);
+            this.guna2GradientButton1.TabIndex = 18;
+            this.guna2GradientButton1.Text = "ÜRÜNÜ EKLE";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // txtAdi
             // 
-            this.txtAdi.Location = new System.Drawing.Point(182, 36);
+            this.txtAdi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
+            this.txtAdi.BorderRadius = 6;
+            this.txtAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAdi.DefaultText = "";
+            this.txtAdi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAdi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAdi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAdi.DisabledState.Parent = this.txtAdi;
+            this.txtAdi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAdi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.txtAdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAdi.FocusedState.Parent = this.txtAdi;
+            this.txtAdi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAdi.HoverState.Parent = this.txtAdi;
+            this.txtAdi.Location = new System.Drawing.Point(66, 106);
             this.txtAdi.Name = "txtAdi";
-            this.txtAdi.Size = new System.Drawing.Size(100, 22);
-            this.txtAdi.TabIndex = 8;
+            this.txtAdi.PasswordChar = '\0';
+            this.txtAdi.PlaceholderForeColor = System.Drawing.Color.Yellow;
+            this.txtAdi.PlaceholderText = "         ÜRÜN ADI";
+            this.txtAdi.SelectedText = "";
+            this.txtAdi.ShadowDecoration.Parent = this.txtAdi;
+            this.txtAdi.Size = new System.Drawing.Size(126, 41);
+            this.txtAdi.TabIndex = 33;
             // 
-            // groupBox7
+            // txtFiyat
             // 
-            this.groupBox7.Controls.Add(this.button2);
-            this.groupBox7.Controls.Add(this.txtBakiye);
-            this.groupBox7.Location = new System.Drawing.Point(452, 76);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(401, 147);
-            this.groupBox7.TabIndex = 7;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Bakiye Ekle";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(231, 40);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(51, 25);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Ekle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.txtFiyat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
+            this.txtFiyat.BorderRadius = 6;
+            this.txtFiyat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFiyat.DefaultText = "";
+            this.txtFiyat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFiyat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFiyat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFiyat.DisabledState.Parent = this.txtFiyat;
+            this.txtFiyat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFiyat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.txtFiyat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFiyat.FocusedState.Parent = this.txtFiyat;
+            this.txtFiyat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFiyat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFiyat.HoverState.Parent = this.txtFiyat;
+            this.txtFiyat.Location = new System.Drawing.Point(66, 153);
+            this.txtFiyat.Name = "txtFiyat";
+            this.txtFiyat.PasswordChar = '\0';
+            this.txtFiyat.PlaceholderForeColor = System.Drawing.Color.Yellow;
+            this.txtFiyat.PlaceholderText = "            FİYATI";
+            this.txtFiyat.SelectedText = "";
+            this.txtFiyat.ShadowDecoration.Parent = this.txtFiyat;
+            this.txtFiyat.Size = new System.Drawing.Size(126, 41);
+            this.txtFiyat.TabIndex = 34;
             // 
             // txtBakiye
             // 
-            this.txtBakiye.Location = new System.Drawing.Point(50, 41);
+            this.txtBakiye.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
+            this.txtBakiye.BorderRadius = 20;
+            this.txtBakiye.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBakiye.DefaultText = "";
+            this.txtBakiye.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBakiye.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBakiye.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBakiye.DisabledState.Parent = this.txtBakiye;
+            this.txtBakiye.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBakiye.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.txtBakiye.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBakiye.FocusedState.Parent = this.txtBakiye;
+            this.txtBakiye.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBakiye.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBakiye.HoverState.Parent = this.txtBakiye;
+            this.txtBakiye.Location = new System.Drawing.Point(239, 108);
             this.txtBakiye.Name = "txtBakiye";
-            this.txtBakiye.Size = new System.Drawing.Size(122, 22);
-            this.txtBakiye.TabIndex = 10;
+            this.txtBakiye.PasswordChar = '\0';
+            this.txtBakiye.PlaceholderForeColor = System.Drawing.Color.Yellow;
+            this.txtBakiye.PlaceholderText = "   BAKİYE";
+            this.txtBakiye.SelectedText = "";
+            this.txtBakiye.ShadowDecoration.Parent = this.txtBakiye;
+            this.txtBakiye.Size = new System.Drawing.Size(87, 41);
+            this.txtBakiye.TabIndex = 36;
             // 
-            // label4
+            // guna2ControlBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(773, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 17);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "bakiye miktarınız";
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(540, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 38;
             // 
-            // lblBakiyeMiktar
+            // txtMiktar
             // 
-            this.lblBakiyeMiktar.AutoSize = true;
-            this.lblBakiyeMiktar.Location = new System.Drawing.Point(905, 12);
-            this.lblBakiyeMiktar.Name = "lblBakiyeMiktar";
-            this.lblBakiyeMiktar.Size = new System.Drawing.Size(16, 17);
-            this.lblBakiyeMiktar.TabIndex = 16;
-            this.lblBakiyeMiktar.Text = "0";
+            this.txtMiktar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
+            this.txtMiktar.BorderRadius = 6;
+            this.txtMiktar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMiktar.DefaultText = "";
+            this.txtMiktar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMiktar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMiktar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMiktar.DisabledState.Parent = this.txtMiktar;
+            this.txtMiktar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMiktar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.txtMiktar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMiktar.FocusedState.Parent = this.txtMiktar;
+            this.txtMiktar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMiktar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMiktar.HoverState.Parent = this.txtMiktar;
+            this.txtMiktar.Location = new System.Drawing.Point(66, 200);
+            this.txtMiktar.Name = "txtMiktar";
+            this.txtMiktar.PasswordChar = '\0';
+            this.txtMiktar.PlaceholderForeColor = System.Drawing.Color.Yellow;
+            this.txtMiktar.PlaceholderText = "            MİKTAR";
+            this.txtMiktar.SelectedText = "";
+            this.txtMiktar.ShadowDecoration.Parent = this.txtMiktar;
+            this.txtMiktar.Size = new System.Drawing.Size(126, 41);
+            this.txtMiktar.TabIndex = 39;
             // 
-            // button1
+            // guna2Button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 25);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "geri";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Image = global::WindowsFormsApp1.Properties.Resources.ürün;
+            this.guna2Button1.Location = new System.Drawing.Point(474, 311);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(111, 26);
+            this.guna2Button1.TabIndex = 40;
+            this.guna2Button1.Text = "ALIM EKRANI";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Yellow;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.Black;
+            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Image = global::WindowsFormsApp1.Properties.Resources.BAKİYE;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(244, 155);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(70, 56);
+            this.guna2CircleButton1.TabIndex = 37;
+            this.guna2CircleButton1.Text = "EKLE";
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Image = global::WindowsFormsApp1.Properties.Resources.geriiiiiii;
+            this.guna2Button2.Location = new System.Drawing.Point(-1, -1);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(52, 23);
+            this.guna2Button2.TabIndex = 41;
+            this.guna2Button2.Text = "GERİ";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // SaticiEkrani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 335);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblBakiyeMiktar);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox7);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.ClientSize = new System.Drawing.Size(582, 341);
+            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.txtMiktar);
+            this.Controls.Add(this.guna2ControlBox1);
+            this.Controls.Add(this.guna2CircleButton1);
+            this.Controls.Add(this.txtBakiye);
+            this.Controls.Add(this.txtFiyat);
+            this.Controls.Add(this.txtAdi);
+            this.Controls.Add(this.guna2GradientButton1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SaticiEkrani";
             this.Text = "SaticiEkrani";
-            this.Load += new System.EventHandler(this.SaticiEkrani_Load);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox txtFiyat;
-        private System.Windows.Forms.TextBox txtMiktar;
-        private System.Windows.Forms.TextBox txtAdi;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtBakiye;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblBakiyeMiktar;
-        private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2TextBox txtFiyat;
+        private Guna.UI2.WinForms.Guna2TextBox txtAdi;
+        private Guna.UI2.WinForms.Guna2TextBox txtBakiye;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2TextBox txtMiktar;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
