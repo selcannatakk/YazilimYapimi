@@ -106,26 +106,31 @@ namespace WindowsFormsApp1
                             aliciBakiye = Convert.ToInt32(data["MoneyAmount"]);
                             MessageBox.Show("alici bakiye:" + aliciBakiye);
                         }
-                        dr.Close();
+                        data.Close();
                         
                         // hareketler tablosu 
                         SqlCommand command = new SqlCommand(@"
                             insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye)values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye)", baglanti);
-                        command.Parameters.AddWithValue("@aliciID",ui);
-                        MessageBox.Show("+++++++++++++");
-                        command.Parameters.AddWithValue("@aliciID", Convert.ToInt32(lblSaticiId.Text));
+                        command.Parameters.AddWithValue("@aliciID", ui);
+                        command.Parameters.AddWithValue("@saticiID", Convert.ToInt32(lblSaticiId.Text));
                         command.Parameters.AddWithValue("@urunID", urunId);
                         command.Parameters.AddWithValue("@aliciBakiye", aliciBakiye);
                         command.Parameters.AddWithValue("@saticiBakiye", saticiBakiye);
-                        
-                        MessageBox.Show("aliciID:" + ui);
-                        MessageBox.Show("\nsaticiID:" + Convert.ToInt32(lblSaticiId.Text));
-                        MessageBox.Show("\nurunID:" + urunId);
-                        MessageBox.Show("\naliciBakiye:" + aliciBakiye);
-                        MessageBox.Show("\nsaticiBakiye:" + saticiBakiye);
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show(
+                        "aliciID:" + ui +
+                        "\nsaticiID:" + Convert.ToInt32(lblSaticiId.Text) +
+                        "\nurunID:" + urunId +
+                        "\naliciBakiye:" + aliciBakiye +
+                        "\nsaticiBakiye:" + saticiBakiye);
 
                         // alınan ürünü satılanürün tablosundan silme
-
+                        SqlCommand com = new SqlCommand(@" delete from tblProduct2 where ProductID=@productID", baglanti);
+                        com.Parameters.AddWithValue("@productID", urunId);
+                        com.ExecuteNonQuery();
+                        // tablonun güncel versiyonunu gösterme
+                        this.tblProduct2TableAdapter.Fill(this.projetsDataSet.tblProduct2);
 
                     }
                     else

@@ -45,6 +45,7 @@ namespace WindowsFormsApp1
             komut.Parameters.AddWithValue("@Money", txtBakiye.Text);
             komut.Parameters.AddWithValue("@UserID", userId);
             komut.ExecuteNonQuery();
+            MessageBox.Show("Bakiye Ekleme Admin onayına gönderildi onaylandıktan sonra yayınlacaktır!");
             baglanti.Close();
         }     
         private void guna2Button1_Click(object sender, EventArgs e)
