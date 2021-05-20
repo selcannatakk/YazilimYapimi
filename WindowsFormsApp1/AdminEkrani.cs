@@ -131,9 +131,7 @@ namespace WindowsFormsApp1
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            Hareket hareket = new Hareket();
-            hareket.Show();
-            this.Hide();
+            
         }
     }
 }

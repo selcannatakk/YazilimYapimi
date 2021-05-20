@@ -162,6 +162,11 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
+        private void Hareketler_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int urunMiktar, urunFiyat;
