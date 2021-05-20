@@ -78,7 +78,12 @@ namespace WindowsFormsApp1
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Onay İşlemi Gerçekleşti.");
-            //DELETEEEEEEEEEEEEEEEEE UNUTMAAAAAA
+            SqlCommand command = new SqlCommand(@"delete from tblProduct where ProductName=@productName", baglanti);
+            command.Parameters.AddWithValue("@productName", lblAdi.Text);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Silme İşlemi Gerçekleşti.");
+            this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
+            baglanti.Close();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -98,11 +103,11 @@ namespace WindowsFormsApp1
                 komut3.Parameters.AddWithValue("@userID", Convert.ToInt32(lblua.Text));
                 komut3.ExecuteNonQuery();
                 MessageBox.Show("Onay İşlemi Gerçekleşti.");
-                
+
             }
 
             else
-            {      
+            {
                 // insert
                 dr.Close();
                 SqlCommand komut2 = new SqlCommand(@"
@@ -118,39 +123,9 @@ namespace WindowsFormsApp1
             command.Parameters.AddWithValue("@userID", Convert.ToInt32(lblua.Text));
             command.ExecuteNonQuery();
             MessageBox.Show("Silme İşlemi Gerçekleşti.");
-            baglanti.Close();
+
             this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
             baglanti.Close();
-
-
-           
-
-
-            //baglanti.Open();
-            //SqlCommand komut = new SqlCommand(@"insert into tblAdminMoney2 (MoneyAmount,UserID) 
-            //values(@moneyAmount,@userID)", baglanti);
-            //komut.Parameters.AddWithValue("@moneyAmount", Convert.ToInt32(lblup.Text));
-            //komut.Parameters.AddWithValue("@userID", Convert.ToInt32(lblua.Text));
-            //komut.ExecuteNonQuery();
-
-            //MessageBox.Show("Onay İşlemi Gerçekleşti.");
-            ////delete unutma
-            //SqlCommand command = new SqlCommand(@"delete from AdminMoney where UserID=@userID", baglanti);
-            //command.Parameters.AddWithValue("@userID", Convert.ToInt32(lblua.Text));
-            //command.ExecuteNonQuery();
-            //MessageBox.Show("Silme İşlemi Gerçekleşti.");
-            //baglanti.Close();
-
-            //this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
-
-            //bakiye güncelleme user id döndür varmı yokmu varsa update yoksa insert into
-            //baglanti.Open();
-            //SqlCommand komut = new SqlCommand(@"update tblAdminMoney2 set MoneyAmount = MoneyAmount + @money where UserID = @userID ", baglanti);
-            //komut.Parameters.AddWithValue("@Money", txtBakiye.Text);
-            //komut.Parameters.AddWithValue("@UserID", userId);
-            //komut.ExecuteNonQuery();
-            //baglanti.Close();
-
 
         }
 
