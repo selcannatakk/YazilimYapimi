@@ -83,11 +83,11 @@ namespace WindowsFormsApp1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
-            this.groupBox1.Location = new System.Drawing.Point(473, 42);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(631, 52);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(284, 171);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(379, 210);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BAKİYE";
@@ -95,18 +95,20 @@ namespace WindowsFormsApp1
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.User,
             this.Money});
             this.dataGridView1.DataSource = this.adminMoneyBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 17);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(280, 154);
+            this.dataGridView1.Size = new System.Drawing.Size(373, 191);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUrunOnay_CellClick);
             // 
@@ -116,7 +118,6 @@ namespace WindowsFormsApp1
             this.User.HeaderText = "User";
             this.User.MinimumWidth = 6;
             this.User.Name = "User";
-            this.User.Width = 125;
             // 
             // Money
             // 
@@ -124,7 +125,6 @@ namespace WindowsFormsApp1
             this.Money.HeaderText = "Money";
             this.Money.MinimumWidth = 6;
             this.Money.Name = "Money";
-            this.Money.Width = 125;
             // 
             // adminMoneyBindingSource
             // 
@@ -149,10 +149,9 @@ namespace WindowsFormsApp1
             // 
             this.lblua.AutoSize = true;
             this.lblua.ForeColor = System.Drawing.Color.Yellow;
-            this.lblua.Location = new System.Drawing.Point(624, 246);
-            this.lblua.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblua.Location = new System.Drawing.Point(832, 303);
             this.lblua.Name = "lblua";
-            this.lblua.Size = new System.Drawing.Size(35, 13);
+            this.lblua.Size = new System.Drawing.Size(44, 17);
             this.lblua.TabIndex = 25;
             this.lblua.Text = "XXXX";
             // 
@@ -160,10 +159,9 @@ namespace WindowsFormsApp1
             // 
             this.lblup.AutoSize = true;
             this.lblup.ForeColor = System.Drawing.Color.Yellow;
-            this.lblup.Location = new System.Drawing.Point(624, 282);
-            this.lblup.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblup.Location = new System.Drawing.Point(832, 347);
             this.lblup.Name = "lblup";
-            this.lblup.Size = new System.Drawing.Size(35, 13);
+            this.lblup.Size = new System.Drawing.Size(44, 17);
             this.lblup.TabIndex = 26;
             this.lblup.Text = "XXXX";
             // 
@@ -171,10 +169,9 @@ namespace WindowsFormsApp1
             // 
             this.lblAdi.AutoSize = true;
             this.lblAdi.ForeColor = System.Drawing.Color.Yellow;
-            this.lblAdi.Location = new System.Drawing.Point(222, 234);
-            this.lblAdi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdi.Location = new System.Drawing.Point(296, 288);
             this.lblAdi.Name = "lblAdi";
-            this.lblAdi.Size = new System.Drawing.Size(35, 13);
+            this.lblAdi.Size = new System.Drawing.Size(44, 17);
             this.lblAdi.TabIndex = 28;
             this.lblAdi.Text = "XXXX";
             // 
@@ -182,10 +179,9 @@ namespace WindowsFormsApp1
             // 
             this.lblid.AutoSize = true;
             this.lblid.ForeColor = System.Drawing.Color.Yellow;
-            this.lblid.Location = new System.Drawing.Point(222, 300);
-            this.lblid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblid.Location = new System.Drawing.Point(296, 369);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(35, 13);
+            this.lblid.Size = new System.Drawing.Size(44, 17);
             this.lblid.TabIndex = 27;
             this.lblid.Text = "XXXX";
             // 
@@ -193,10 +189,9 @@ namespace WindowsFormsApp1
             // 
             this.lblurunFiyati.AutoSize = true;
             this.lblurunFiyati.ForeColor = System.Drawing.Color.Yellow;
-            this.lblurunFiyati.Location = new System.Drawing.Point(222, 277);
-            this.lblurunFiyati.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblurunFiyati.Location = new System.Drawing.Point(296, 341);
             this.lblurunFiyati.Name = "lblurunFiyati";
-            this.lblurunFiyati.Size = new System.Drawing.Size(35, 13);
+            this.lblurunFiyati.Size = new System.Drawing.Size(44, 17);
             this.lblurunFiyati.TabIndex = 30;
             this.lblurunFiyati.Text = "XXXX";
             // 
@@ -204,10 +199,9 @@ namespace WindowsFormsApp1
             // 
             this.lblUrunMiktar.AutoSize = true;
             this.lblUrunMiktar.ForeColor = System.Drawing.Color.Yellow;
-            this.lblUrunMiktar.Location = new System.Drawing.Point(222, 258);
-            this.lblUrunMiktar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUrunMiktar.Location = new System.Drawing.Point(296, 318);
             this.lblUrunMiktar.Name = "lblUrunMiktar";
-            this.lblUrunMiktar.Size = new System.Drawing.Size(35, 13);
+            this.lblUrunMiktar.Size = new System.Drawing.Size(44, 17);
             this.lblUrunMiktar.TabIndex = 31;
             this.lblUrunMiktar.Text = "XXXX";
             // 
@@ -262,10 +256,11 @@ namespace WindowsFormsApp1
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(723, -1);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(964, -1);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
             this.guna2ControlBox1.TabIndex = 32;
             // 
             // guna2DataGridView2
@@ -304,14 +299,14 @@ namespace WindowsFormsApp1
             this.guna2DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView2.EnableHeadersVisualStyles = false;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(2, 15);
-            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(3, 17);
+            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.RowHeadersWidth = 51;
             this.guna2DataGridView2.RowTemplate.Height = 24;
             this.guna2DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(414, 160);
+            this.guna2DataGridView2.Size = new System.Drawing.Size(551, 199);
             this.guna2DataGridView2.TabIndex = 1;
             this.guna2DataGridView2.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -369,11 +364,11 @@ namespace WindowsFormsApp1
             // 
             this.groupBox2.Controls.Add(this.guna2DataGridView2);
             this.groupBox2.ForeColor = System.Drawing.Color.Yellow;
-            this.groupBox2.Location = new System.Drawing.Point(9, 36);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(12, 44);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(418, 177);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(557, 218);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ÜRÜN";
@@ -382,10 +377,9 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(120, 258);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(160, 318);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(110, 17);
             this.label1.TabIndex = 39;
             this.label1.Text = "ÜRÜN MİKTARI:";
             // 
@@ -393,10 +387,9 @@ namespace WindowsFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(131, 277);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(175, 341);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.Size = new System.Drawing.Size(97, 17);
             this.label2.TabIndex = 38;
             this.label2.Text = "ÜRÜN FİYATI:";
             // 
@@ -404,10 +397,9 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(146, 234);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(195, 288);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(78, 17);
             this.label3.TabIndex = 37;
             this.label3.Text = "ÜRÜN ADI:";
             // 
@@ -415,10 +407,9 @@ namespace WindowsFormsApp1
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(151, 300);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(201, 369);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 36;
             this.label4.Text = "SATICI ID:";
             // 
@@ -426,10 +417,9 @@ namespace WindowsFormsApp1
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(561, 282);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(748, 347);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 41;
             this.label5.Text = "BAKİYE:";
             // 
@@ -437,10 +427,9 @@ namespace WindowsFormsApp1
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Yellow;
-            this.label6.Location = new System.Drawing.Point(530, 246);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(707, 303);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 13);
+            this.label6.Size = new System.Drawing.Size(98, 17);
             this.label6.TabIndex = 40;
             this.label6.Text = "KULLANICI ID:";
             // 
@@ -452,10 +441,11 @@ namespace WindowsFormsApp1
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
             this.guna2Button3.Image = global::WindowsFormsApp1.Properties.Resources.ONAY;
-            this.guna2Button3.Location = new System.Drawing.Point(564, 331);
+            this.guna2Button3.Location = new System.Drawing.Point(752, 407);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(95, 21);
+            this.guna2Button3.Size = new System.Drawing.Size(127, 26);
             this.guna2Button3.TabIndex = 35;
             this.guna2Button3.Text = "ONAYLA";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -468,10 +458,11 @@ namespace WindowsFormsApp1
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Image = global::WindowsFormsApp1.Properties.Resources.ONAY;
-            this.guna2Button2.Location = new System.Drawing.Point(158, 331);
+            this.guna2Button2.Location = new System.Drawing.Point(211, 407);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(95, 21);
+            this.guna2Button2.Size = new System.Drawing.Size(127, 26);
             this.guna2Button2.TabIndex = 34;
             this.guna2Button2.Text = "ONAYLA";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -485,19 +476,20 @@ namespace WindowsFormsApp1
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::WindowsFormsApp1.Properties.Resources.geriiiiiii;
             this.guna2Button1.Location = new System.Drawing.Point(-1, -1);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(52, 23);
+            this.guna2Button1.Size = new System.Drawing.Size(69, 28);
             this.guna2Button1.TabIndex = 33;
             this.guna2Button1.Text = "GERİ";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // AdminEkrani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(42)))));
-            this.ClientSize = new System.Drawing.Size(769, 374);
+            this.ClientSize = new System.Drawing.Size(1025, 460);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
@@ -517,7 +509,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminEkrani";
             this.Text = " ";
             this.Load += new System.EventHandler(this.AdminEkrani_Load);

@@ -61,10 +61,11 @@ namespace WindowsFormsApp1
             this.guna2GradientButton1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
             this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(66, 256);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(88, 315);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(126, 45);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(168, 55);
             this.guna2GradientButton1.TabIndex = 18;
             this.guna2GradientButton1.Text = "ÜRÜNÜ EKLE";
             this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
@@ -86,14 +87,15 @@ namespace WindowsFormsApp1
             this.txtAdi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAdi.HoverState.Parent = this.txtAdi;
-            this.txtAdi.Location = new System.Drawing.Point(66, 106);
+            this.txtAdi.Location = new System.Drawing.Point(88, 130);
+            this.txtAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.PasswordChar = '\0';
             this.txtAdi.PlaceholderForeColor = System.Drawing.Color.Yellow;
             this.txtAdi.PlaceholderText = "         ÜRÜN ADI";
             this.txtAdi.SelectedText = "";
             this.txtAdi.ShadowDecoration.Parent = this.txtAdi;
-            this.txtAdi.Size = new System.Drawing.Size(126, 41);
+            this.txtAdi.Size = new System.Drawing.Size(168, 50);
             this.txtAdi.TabIndex = 33;
             // 
             // txtFiyat
@@ -113,14 +115,15 @@ namespace WindowsFormsApp1
             this.txtFiyat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFiyat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFiyat.HoverState.Parent = this.txtFiyat;
-            this.txtFiyat.Location = new System.Drawing.Point(66, 153);
+            this.txtFiyat.Location = new System.Drawing.Point(88, 188);
+            this.txtFiyat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFiyat.Name = "txtFiyat";
             this.txtFiyat.PasswordChar = '\0';
             this.txtFiyat.PlaceholderForeColor = System.Drawing.Color.Yellow;
             this.txtFiyat.PlaceholderText = "            FİYATI";
             this.txtFiyat.SelectedText = "";
             this.txtFiyat.ShadowDecoration.Parent = this.txtFiyat;
-            this.txtFiyat.Size = new System.Drawing.Size(126, 41);
+            this.txtFiyat.Size = new System.Drawing.Size(168, 50);
             this.txtFiyat.TabIndex = 34;
             // 
             // txtBakiye
@@ -140,14 +143,15 @@ namespace WindowsFormsApp1
             this.txtBakiye.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBakiye.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBakiye.HoverState.Parent = this.txtBakiye;
-            this.txtBakiye.Location = new System.Drawing.Point(239, 108);
+            this.txtBakiye.Location = new System.Drawing.Point(319, 133);
+            this.txtBakiye.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBakiye.Name = "txtBakiye";
             this.txtBakiye.PasswordChar = '\0';
             this.txtBakiye.PlaceholderForeColor = System.Drawing.Color.Yellow;
             this.txtBakiye.PlaceholderText = "   BAKİYE";
             this.txtBakiye.SelectedText = "";
             this.txtBakiye.ShadowDecoration.Parent = this.txtBakiye;
-            this.txtBakiye.Size = new System.Drawing.Size(87, 41);
+            this.txtBakiye.Size = new System.Drawing.Size(116, 50);
             this.txtBakiye.TabIndex = 36;
             // 
             // guna2ControlBox1
@@ -156,10 +160,11 @@ namespace WindowsFormsApp1
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(540, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(720, 0);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
             this.guna2ControlBox1.TabIndex = 38;
             // 
             // txtMiktar
@@ -179,14 +184,15 @@ namespace WindowsFormsApp1
             this.txtMiktar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMiktar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMiktar.HoverState.Parent = this.txtMiktar;
-            this.txtMiktar.Location = new System.Drawing.Point(66, 200);
+            this.txtMiktar.Location = new System.Drawing.Point(88, 246);
+            this.txtMiktar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMiktar.Name = "txtMiktar";
             this.txtMiktar.PasswordChar = '\0';
             this.txtMiktar.PlaceholderForeColor = System.Drawing.Color.Yellow;
             this.txtMiktar.PlaceholderText = "            MİKTAR";
             this.txtMiktar.SelectedText = "";
             this.txtMiktar.ShadowDecoration.Parent = this.txtMiktar;
-            this.txtMiktar.Size = new System.Drawing.Size(126, 41);
+            this.txtMiktar.Size = new System.Drawing.Size(168, 50);
             this.txtMiktar.TabIndex = 39;
             // 
             // guna2Button1
@@ -197,10 +203,11 @@ namespace WindowsFormsApp1
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::WindowsFormsApp1.Properties.Resources.ürün;
-            this.guna2Button1.Location = new System.Drawing.Point(474, 311);
+            this.guna2Button1.Location = new System.Drawing.Point(632, 386);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(111, 26);
+            this.guna2Button1.Size = new System.Drawing.Size(148, 32);
             this.guna2Button1.TabIndex = 40;
             this.guna2Button1.Text = "ALIM EKRANI";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -214,11 +221,12 @@ namespace WindowsFormsApp1
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.Black;
             this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
             this.guna2CircleButton1.Image = global::WindowsFormsApp1.Properties.Resources.BAKİYE;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(244, 155);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(325, 191);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(70, 56);
+            this.guna2CircleButton1.Size = new System.Drawing.Size(93, 69);
             this.guna2CircleButton1.TabIndex = 37;
             this.guna2CircleButton1.Text = "EKLE";
             this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
@@ -232,19 +240,20 @@ namespace WindowsFormsApp1
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Image = global::WindowsFormsApp1.Properties.Resources.geriiiiiii;
             this.guna2Button2.Location = new System.Drawing.Point(-1, -1);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(52, 23);
+            this.guna2Button2.Size = new System.Drawing.Size(69, 28);
             this.guna2Button2.TabIndex = 41;
             this.guna2Button2.Text = "GERİ";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // SaticiEkrani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(582, 341);
+            this.ClientSize = new System.Drawing.Size(776, 420);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.txtMiktar);
@@ -255,7 +264,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.txtAdi);
             this.Controls.Add(this.guna2GradientButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SaticiEkrani";
             this.Text = "SaticiEkrani";
             this.ResumeLayout(false);
