@@ -90,10 +90,33 @@ namespace WindowsFormsApp1
             komut.Parameters.AddWithValue("@moneyAmount", Convert.ToInt32(lblup.Text));
             komut.Parameters.AddWithValue("@userID", Convert.ToInt32(lblua.Text));
             komut.ExecuteNonQuery();
-            baglanti.Close();
+           
             MessageBox.Show("Onay İşlemi Gerçekleşti.");
             //delete unutma
+            SqlCommand command = new SqlCommand(@"delete from AdminMoney where UserID=@userID", baglanti);
+            command.Parameters.AddWithValue("@userID", Convert.ToInt32(lblua.Text));
+            command.ExecuteNonQuery();
+            MessageBox.Show("Silme İşlemi Gerçekleşti.");
             baglanti.Close();
+
+            this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
+
+            //bakiye güncelleme user id döndür varmı yokmu varsa update yoksa insert into
+            //baglanti.Open();
+            //SqlCommand komut = new SqlCommand(@"update tblAdminMoney2 set MoneyAmount = MoneyAmount + @money where UserID = @userID ", baglanti);
+            //komut.Parameters.AddWithValue("@Money", txtBakiye.Text);
+            //komut.Parameters.AddWithValue("@UserID", userId);
+            //komut.ExecuteNonQuery();
+            //baglanti.Close();
+
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            Hareket hareket = new Hareket();
+            hareket.Show();
+            this.Hide();
         }
     }
 }

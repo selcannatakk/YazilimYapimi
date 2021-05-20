@@ -33,42 +33,34 @@ namespace WindowsFormsApp1
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblProduct2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.projetsDataSet = new WindowsFormsApp1.ProjetsDataSet();
-            this.tblProduct2TableAdapter = new WindowsFormsApp1.ProjetsDataSetTableAdapters.tblProduct2TableAdapter();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblSaticiId = new System.Windows.Forms.Label();
+            this.lblSaticiUrunAd = new System.Windows.Forms.Label();
+            this.lblSaticiUrunMiktar = new System.Windows.Forms.Label();
+            this.lblSaticiFiyat = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.lblSaticiTutar = new System.Windows.Forms.Label();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2BtnAl = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.projetsDataSet = new WindowsFormsApp1.ProjetsDataSet();
+            this.tblProduct2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblProduct2TableAdapter = new WindowsFormsApp1.ProjetsDataSetTableAdapters.tblProduct2TableAdapter();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblProduct2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProduct2BindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.ContainerControl = this;
-            this.guna2DragControl1.TargetControl = this;
             // 
             // guna2ControlBox1
             // 
@@ -77,7 +69,7 @@ namespace WindowsFormsApp1
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(721, 0);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
@@ -103,10 +95,11 @@ namespace WindowsFormsApp1
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 21;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userIDDataGridViewTextBoxColumn,
+            this.productIDDataGridViewTextBoxColumn,
             this.productNameDataGridViewTextBoxColumn,
             this.productAmountDataGridViewTextBoxColumn,
-            this.productPriceDataGridViewTextBoxColumn});
+            this.productPriceDataGridViewTextBoxColumn,
+            this.userIDDataGridViewTextBoxColumn});
             this.guna2DataGridView1.DataSource = this.tblProduct2BindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -119,7 +112,7 @@ namespace WindowsFormsApp1
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(13, 53);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
@@ -149,48 +142,7 @@ namespace WindowsFormsApp1
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "SATICI";
-            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "ÜRÜN ";
-            this.productNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            // 
-            // productAmountDataGridViewTextBoxColumn
-            // 
-            this.productAmountDataGridViewTextBoxColumn.DataPropertyName = "ProductAmount";
-            this.productAmountDataGridViewTextBoxColumn.HeaderText = "MİKTAR";
-            this.productAmountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productAmountDataGridViewTextBoxColumn.Name = "productAmountDataGridViewTextBoxColumn";
-            // 
-            // productPriceDataGridViewTextBoxColumn
-            // 
-            this.productPriceDataGridViewTextBoxColumn.DataPropertyName = "ProductPrice";
-            this.productPriceDataGridViewTextBoxColumn.HeaderText = "FİYAT";
-            this.productPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productPriceDataGridViewTextBoxColumn.Name = "productPriceDataGridViewTextBoxColumn";
-            // 
-            // tblProduct2BindingSource
-            // 
-            this.tblProduct2BindingSource.DataMember = "tblProduct2";
-            this.tblProduct2BindingSource.DataSource = this.projetsDataSet;
-            // 
-            // projetsDataSet
-            // 
-            this.projetsDataSet.DataSetName = "ProjetsDataSet";
-            this.projetsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblProduct2TableAdapter
-            // 
-            this.tblProduct2TableAdapter.ClearBeforeFill = true;
+            this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
             // label2
             // 
@@ -240,53 +192,53 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 6;
             this.label1.Text = "SATICI:";
             // 
-            // label5
+            // lblSaticiId
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(669, 101);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 24);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "XXXX";
+            this.lblSaticiId.AutoSize = true;
+            this.lblSaticiId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSaticiId.ForeColor = System.Drawing.Color.Yellow;
+            this.lblSaticiId.Location = new System.Drawing.Point(669, 101);
+            this.lblSaticiId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSaticiId.Name = "lblSaticiId";
+            this.lblSaticiId.Size = new System.Drawing.Size(70, 24);
+            this.lblSaticiId.TabIndex = 8;
+            this.lblSaticiId.Text = "XXXX";
             // 
-            // label6
+            // lblSaticiUrunAd
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.Yellow;
-            this.label6.Location = new System.Drawing.Point(669, 142);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 24);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "XXXX";
+            this.lblSaticiUrunAd.AutoSize = true;
+            this.lblSaticiUrunAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSaticiUrunAd.ForeColor = System.Drawing.Color.Yellow;
+            this.lblSaticiUrunAd.Location = new System.Drawing.Point(669, 142);
+            this.lblSaticiUrunAd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSaticiUrunAd.Name = "lblSaticiUrunAd";
+            this.lblSaticiUrunAd.Size = new System.Drawing.Size(70, 24);
+            this.lblSaticiUrunAd.TabIndex = 9;
+            this.lblSaticiUrunAd.Text = "XXXX";
             // 
-            // label7
+            // lblSaticiUrunMiktar
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.Yellow;
-            this.label7.Location = new System.Drawing.Point(669, 185);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 24);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "XXXX";
+            this.lblSaticiUrunMiktar.AutoSize = true;
+            this.lblSaticiUrunMiktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSaticiUrunMiktar.ForeColor = System.Drawing.Color.Yellow;
+            this.lblSaticiUrunMiktar.Location = new System.Drawing.Point(669, 185);
+            this.lblSaticiUrunMiktar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSaticiUrunMiktar.Name = "lblSaticiUrunMiktar";
+            this.lblSaticiUrunMiktar.Size = new System.Drawing.Size(70, 24);
+            this.lblSaticiUrunMiktar.TabIndex = 10;
+            this.lblSaticiUrunMiktar.Text = "XXXX";
             // 
-            // label8
+            // lblSaticiFiyat
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.Color.Yellow;
-            this.label8.Location = new System.Drawing.Point(669, 228);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 24);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "XXXX";
+            this.lblSaticiFiyat.AutoSize = true;
+            this.lblSaticiFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSaticiFiyat.ForeColor = System.Drawing.Color.Yellow;
+            this.lblSaticiFiyat.Location = new System.Drawing.Point(669, 228);
+            this.lblSaticiFiyat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSaticiFiyat.Name = "lblSaticiFiyat";
+            this.lblSaticiFiyat.Size = new System.Drawing.Size(70, 24);
+            this.lblSaticiFiyat.TabIndex = 11;
+            this.lblSaticiFiyat.Text = "XXXX";
             // 
             // label9
             // 
@@ -300,37 +252,17 @@ namespace WindowsFormsApp1
             this.label9.TabIndex = 12;
             this.label9.Text = "TUTAR:";
             // 
-            // label10
+            // lblSaticiTutar
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.ForeColor = System.Drawing.Color.Yellow;
-            this.label10.Location = new System.Drawing.Point(669, 265);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 24);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "XXXX";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 21;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = global::WindowsFormsApp1.Properties.Resources.ALIŞ;
-            this.guna2Button1.Location = new System.Drawing.Point(561, 314);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(203, 44);
-            this.guna2Button1.TabIndex = 7;
-            this.guna2Button1.Text = "SATIN AL";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.lblSaticiTutar.AutoSize = true;
+            this.lblSaticiTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSaticiTutar.ForeColor = System.Drawing.Color.Yellow;
+            this.lblSaticiTutar.Location = new System.Drawing.Point(669, 265);
+            this.lblSaticiTutar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSaticiTutar.Name = "lblSaticiTutar";
+            this.lblSaticiTutar.Size = new System.Drawing.Size(70, 24);
+            this.lblSaticiTutar.TabIndex = 13;
+            this.lblSaticiTutar.Text = "XXXX";
             // 
             // guna2Button2
             // 
@@ -341,13 +273,92 @@ namespace WindowsFormsApp1
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Image = global::WindowsFormsApp1.Properties.Resources.geriiiiiii;
             this.guna2Button2.Location = new System.Drawing.Point(1, -1);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(69, 28);
             this.guna2Button2.TabIndex = 34;
             this.guna2Button2.Text = "GERİ";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2BtnAl
+            // 
+            this.guna2BtnAl.Animated = true;
+            this.guna2BtnAl.AutoRoundedCorners = true;
+            this.guna2BtnAl.BorderRadius = 21;
+            this.guna2BtnAl.CheckedState.Parent = this.guna2BtnAl;
+            this.guna2BtnAl.CustomImages.Parent = this.guna2BtnAl;
+            this.guna2BtnAl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.guna2BtnAl.ForeColor = System.Drawing.Color.White;
+            this.guna2BtnAl.HoverState.Parent = this.guna2BtnAl;
+            this.guna2BtnAl.Image = global::WindowsFormsApp1.Properties.Resources.ALIŞ;
+            this.guna2BtnAl.Location = new System.Drawing.Point(561, 314);
+            this.guna2BtnAl.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2BtnAl.Name = "guna2BtnAl";
+            this.guna2BtnAl.ShadowDecoration.Parent = this.guna2BtnAl;
+            this.guna2BtnAl.Size = new System.Drawing.Size(203, 44);
+            this.guna2BtnAl.TabIndex = 7;
+            this.guna2BtnAl.Text = "SATIN AL";
+            this.guna2BtnAl.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.ContainerControl = this;
+            this.guna2DragControl1.TargetControl = this;
+            // 
+            // projetsDataSet
+            // 
+            this.projetsDataSet.DataSetName = "ProjetsDataSet";
+            this.projetsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblProduct2BindingSource
+            // 
+            this.tblProduct2BindingSource.DataMember = "tblProduct2";
+            this.tblProduct2BindingSource.DataSource = this.projetsDataSet;
+            // 
+            // tblProduct2TableAdapter
+            // 
+            this.tblProduct2TableAdapter.ClearBeforeFill = true;
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            // 
+            // productAmountDataGridViewTextBoxColumn
+            // 
+            this.productAmountDataGridViewTextBoxColumn.DataPropertyName = "ProductAmount";
+            this.productAmountDataGridViewTextBoxColumn.HeaderText = "ProductAmount";
+            this.productAmountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productAmountDataGridViewTextBoxColumn.Name = "productAmountDataGridViewTextBoxColumn";
+            // 
+            // productPriceDataGridViewTextBoxColumn
+            // 
+            this.productPriceDataGridViewTextBoxColumn.DataPropertyName = "ProductPrice";
+            this.productPriceDataGridViewTextBoxColumn.HeaderText = "ProductPrice";
+            this.productPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productPriceDataGridViewTextBoxColumn.Name = "productPriceDataGridViewTextBoxColumn";
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
+            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
             // 
             // Hareketler
             // 
@@ -356,13 +367,13 @@ namespace WindowsFormsApp1
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(781, 379);
             this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblSaticiTutar);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.lblSaticiFiyat);
+            this.Controls.Add(this.lblSaticiUrunMiktar);
+            this.Controls.Add(this.lblSaticiUrunAd);
+            this.Controls.Add(this.lblSaticiId);
+            this.Controls.Add(this.guna2BtnAl);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -375,37 +386,37 @@ namespace WindowsFormsApp1
             this.Text = "Hareketler";
             this.Load += new System.EventHandler(this.Hareketler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblProduct2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProduct2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private ProjetsDataSet projetsDataSet;
-        private System.Windows.Forms.BindingSource tblProduct2BindingSource;
-        private ProjetsDataSetTableAdapters.tblProduct2TableAdapter tblProduct2TableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label lblSaticiTutar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblSaticiFiyat;
+        private System.Windows.Forms.Label lblSaticiUrunMiktar;
+        private System.Windows.Forms.Label lblSaticiUrunAd;
+        private System.Windows.Forms.Label lblSaticiId;
+        private Guna.UI2.WinForms.Guna2Button guna2BtnAl;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private ProjetsDataSet projetsDataSet;
+        private System.Windows.Forms.BindingSource tblProduct2BindingSource;
+        private ProjetsDataSetTableAdapters.tblProduct2TableAdapter tblProduct2TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productAmountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
     }
 }

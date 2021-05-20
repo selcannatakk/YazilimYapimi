@@ -31,35 +31,121 @@ namespace WindowsFormsApp1
         {
 
         }
+        int saticiBakiye, aliciBakiye;
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            int miktar = 0;
-            baglanti.Open();
-            SqlCommand verioku = new SqlCommand("select * from tblAdminMoney2 where userId= '" + Convert.ToString(ui) + "'", baglanti);
-            verioku.ExecuteNonQuery();
-            SqlDataReader oku;
-            oku = verioku.ExecuteReader();
+            // alici bilgi alma işlemleri
+            int bakiye, urunId;
+           
 
-            while (oku.Read())
-            {
-                bakiye = Convert.ToInt32(oku["userId"]);
-            }
-            oku.Close();
             baglanti.Close();
-           // miktar= fiyat x miktar burayı hesapla
-           //tutar labelina yazdir
-           //ondan sonra bakiyeyle karşılastır ona göre işlem yapılamaz de yada işlem gerçeklesşti de
-           //gerçekleşmişsse ürünü sil
-           //bakiyeyi düüşürüp tekrardan update et adminmoney2 tabelinda
-           //yukarda yaptığım bakiyeyi çekmede yanlış olabilir bi çok şeye baktımda yinede sen kontrol et
-           //numlardan başka insert ederken felan sql de int olana text(string) olarak felan yapmaya çalışılan vardı sanki diğer formlarda h
+
+            baglanti.Open();
+            SqlCommand verioku = new SqlCommand(@"select MoneyAmount from tblAdminMoney2 where UserId= @userId", baglanti);
+            verioku.Parameters.AddWithValue("@userId",ui);
+            verioku.ExecuteNonQuery();
+            SqlDataReader oku = verioku.ExecuteReader();
             
-            //tutarla bakiye karşılaştırılıp uygunsa alışverişine izin verilecek
-            //bakiyeden tutar düşülecek
-            // *** miktar olayı
-            //ürün silenecek
-            //message boxla alındı denecek
-            // zaman kalırsa hareket tablosu yapacağız
+            if (oku.Read())
+            {
+                bakiye = Convert.ToInt32(oku["MoneyAmount"]);
+                MessageBox.Show("alıcı bakiye:" + bakiye);
+                oku.Close();
+                if (bakiye < Convert.ToInt32(lblSaticiTutar.Text))
+                {
+                    MessageBox.Show("Sahip olsuğunuz bakiye urun tutarından düşük olduğu için işlem gerçekleşmemektedir.\n" +
+                        "Sahip olduğunuz bakiye: "+bakiye+"\nAlınmak istenen ürünün tutarı: "+ Convert.ToInt32(lblSaticiTutar.Text));
+                }
+                else         // al sat işlemi
+                {
+                    
+                    SqlCommand komut = new SqlCommand(@"select ProductID from tblProduct2 where UserId= @userId", baglanti);
+                    komut.Parameters.AddWithValue("@userId", lblSaticiId.Text);
+                    SqlDataReader veriokuma = komut.ExecuteReader();
+                    if(veriokuma.Read())
+                    {
+                        urunId = Convert.ToInt32(veriokuma["ProductID"]);
+                        MessageBox.Show(" satici id:" + Convert.ToInt32(lblSaticiId.Text));
+                        MessageBox.Show("urun id:"+urunId);
+                        veriokuma.Close();
+                        //alici bakiye düşme 
+
+                        SqlCommand data1 = new SqlCommand(@"update tblAdminMoney2 set MoneyAmount = MoneyAmount - @money where UserID = @userID ", baglanti);
+                        data1.Parameters.AddWithValue("@Money", lblSaticiTutar.Text);
+                        data1.Parameters.AddWithValue("@UserID", ui);
+                        data1.ExecuteNonQuery();
+                       
+
+                        //satici bakiye artma 
+
+                        SqlCommand data2 = new SqlCommand(@"update tblAdminMoney2 set MoneyAmount = MoneyAmount + @money where UserID = @userID ", baglanti);
+                        data2.Parameters.AddWithValue("@Money", lblSaticiTutar.Text);
+                        data2.Parameters.AddWithValue("@UserID", Convert.ToInt32(lblSaticiId.Text));
+                        data2.ExecuteNonQuery();
+                       
+
+                        // yeni bakiyeleri cekme
+                        
+                        SqlCommand veri1 = new SqlCommand(@"select MoneyAmount from tblAdminMoney2 where UserId= @userId", baglanti);
+                        veri1.Parameters.AddWithValue("@userId", Convert.ToInt32(lblSaticiId.Text));
+                        veri1.ExecuteNonQuery();
+                        SqlDataReader dr = veri1.ExecuteReader();
+                        if (dr.Read())
+                        {
+                            saticiBakiye = Convert.ToInt32(dr["MoneyAmount"]);
+                            MessageBox.Show("satici bakiye:" + saticiBakiye);
+                        }
+                        dr.Close();
+                        
+                        SqlCommand veri2 = new SqlCommand(@"select MoneyAmount from tblAdminMoney2 where UserId= @userId", baglanti);
+                        veri2.Parameters.AddWithValue("@userId", ui);
+                        veri2.ExecuteNonQuery();
+                        SqlDataReader data = veri2.ExecuteReader();
+                        if (data.Read())
+                        {
+                            aliciBakiye = Convert.ToInt32(data["MoneyAmount"]);
+                            MessageBox.Show("alici bakiye:" + aliciBakiye);
+                        }
+                        dr.Close();
+                        
+                        // hareketler tablosu 
+                        SqlCommand command = new SqlCommand(@"
+                            insert into tblHareketler (AliciID,SaticiID,UrunID,AliciBakiye,SaticiBakiye)values(@aliciID,@saticiID,@urunID,@aliciBakiye,@saticiBakiye)", baglanti);
+                        command.Parameters.AddWithValue("@aliciID",ui);
+                        MessageBox.Show("+++++++++++++");
+                        command.Parameters.AddWithValue("@aliciID", Convert.ToInt32(lblSaticiId.Text));
+                        command.Parameters.AddWithValue("@urunID", urunId);
+                        command.Parameters.AddWithValue("@aliciBakiye", aliciBakiye);
+                        command.Parameters.AddWithValue("@saticiBakiye", saticiBakiye);
+                        
+                        MessageBox.Show("aliciID:" + ui);
+                        MessageBox.Show("\nsaticiID:" + Convert.ToInt32(lblSaticiId.Text));
+                        MessageBox.Show("\nurunID:" + urunId);
+                        MessageBox.Show("\naliciBakiye:" + aliciBakiye);
+                        MessageBox.Show("\nsaticiBakiye:" + saticiBakiye);
+
+                        // alınan ürünü satılanürün tablosundan silme
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("ProductId veri okunamadı");
+                    }
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Hic bir veri okunamadı..."); 
+            }
+            
+           
+
+
+            
+            baglanti.Close();
+          
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -69,6 +155,38 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
-       
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int urunMiktar, urunFiyat;
+            if (guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                guna2DataGridView1.CurrentRow.Selected = true;
+                lblSaticiId.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["userIDDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                lblSaticiUrunAd.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["productNameDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                lblSaticiUrunMiktar.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["productAmountDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                lblSaticiFiyat.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["productPriceDataGridViewTextBoxColumn"].FormattedValue.ToString();
+
+                urunFiyat = Convert.ToInt32(lblSaticiFiyat.Text);
+                urunMiktar = Convert.ToInt32(lblSaticiUrunMiktar.Text);
+
+                lblSaticiTutar.Text = (urunMiktar * urunFiyat).ToString();
+
+            }
+        }
+
+        // miktar= fiyat x miktar burayı hesapla
+        //tutar labelina yazdir
+        //ondan sonra bakiyeyle karşılastır ona göre işlem yapılamaz de yada işlem gerçeklesşti de
+        //gerçekleşmişsse ürünü sil
+        //bakiyeyi düüşürüp tekrardan update et adminmoney2 tabelinda
+        //yukarda yaptığım bakiyeyi çekmede yanlış olabilir bi çok şeye baktımda yinede sen kontrol et
+        //numlardan başka insert ederken felan sql de int olana text(string) olarak felan yapmaya çalışılan vardı sanki diğer formlarda h
+
+        //tutarla bakiye karşılaştırılıp uygunsa alışverişine izin verilecek
+        //bakiyeden tutar düşülecek
+        // *** miktar olayı
+        //ürün silenecek
+        //message boxla alındı denecek
+        // zaman kalırsa hareket tablosu yapacağız
     }
 }
