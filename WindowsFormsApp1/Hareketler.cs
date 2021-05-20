@@ -117,7 +117,7 @@ namespace WindowsFormsApp1
                         command.Parameters.AddWithValue("@aliciBakiye", aliciBakiye);
                         command.Parameters.AddWithValue("@saticiBakiye", saticiBakiye);
                         command.ExecuteNonQuery();
-                        MessageBox.Show("Alıcının Bakiyesinden 600 lira saticinin bakiyesine gönderilmiştir.");
+                        MessageBox.Show("Alıcının Bakiyesinden 100 lira saticinin bakiyesine gönderilmiştir.");
                         //MessageBox.Show(
                         //"aliciID:" + ui +
                         //"\nsaticiID:" + Convert.ToInt32(lblSaticiId.Text) +
