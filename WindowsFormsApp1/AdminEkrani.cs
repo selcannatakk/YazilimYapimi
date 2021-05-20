@@ -76,12 +76,12 @@ namespace WindowsFormsApp1
             komut.Parameters.AddWithValue("@productPrice", Convert.ToInt32(lblurunFiyati.Text));
             komut.Parameters.AddWithValue("@userID", Convert.ToInt32(lblid.Text));
             komut.ExecuteNonQuery();
-            baglanti.Close();
+        
             MessageBox.Show("Onay İşlemi Gerçekleşti.");
             SqlCommand command = new SqlCommand(@"delete from tblProduct where ProductName=@productName", baglanti);
             command.Parameters.AddWithValue("@productName", lblAdi.Text);
             command.ExecuteNonQuery();
-            MessageBox.Show("Silme İşlemi Gerçekleşti.");
+            MessageBox.Show("Bekleme listesinden silinip onaylanmıstır.");
             this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
             baglanti.Close();
         }
@@ -122,7 +122,7 @@ namespace WindowsFormsApp1
             SqlCommand command = new SqlCommand(@"delete from AdminMoney where UserID=@userID", baglanti);
             command.Parameters.AddWithValue("@userID", Convert.ToInt32(lblua.Text));
             command.ExecuteNonQuery();
-            MessageBox.Show("Silme İşlemi Gerçekleşti.");
+            MessageBox.Show("Bekleme listesinden silinip onaylanmıstır.");
 
             this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
             baglanti.Close();

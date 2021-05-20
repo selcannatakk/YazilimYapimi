@@ -51,12 +51,13 @@ namespace WindowsFormsApp1
 
 
             }
-            else if (txtsifre.Text == "demet" && txtKullaniciAd.Text == "demet")
+            else if (txtsifre.Text == "admin" && txtKullaniciAd.Text == "admin")
             {
                 AdminEkrani adminEkrani = new AdminEkrani();
                 adminEkrani.Show();
                 this.Hide();
             }
+           
             else
             {
                 MessageBox.Show("yanlıs sıfre veya kulanıcı adı");

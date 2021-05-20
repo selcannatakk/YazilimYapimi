@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
             if (oku.Read())
             {
                 bakiye = Convert.ToInt32(oku["MoneyAmount"]);
-                MessageBox.Show("alıcı bakiye:" + bakiye);
+                //MessageBox.Show("alıcı bakiye:" + bakiye);
                 oku.Close();
                 if (bakiye < Convert.ToInt32(lblSaticiTutar.Text))
                 {
@@ -65,8 +65,8 @@ namespace WindowsFormsApp1
                     if(veriokuma.Read())
                     {
                         urunId = Convert.ToInt32(veriokuma["ProductID"]);
-                        MessageBox.Show(" satici id:" + Convert.ToInt32(lblSaticiId.Text));
-                        MessageBox.Show("urun id:"+urunId);
+                        //MessageBox.Show(" satici id:" + Convert.ToInt32(lblSaticiId.Text));
+                       // MessageBox.Show("urun id:"+urunId);
                         veriokuma.Close();
                         //alici bakiye düşme 
 
@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
                         if (dr.Read())
                         {
                             saticiBakiye = Convert.ToInt32(dr["MoneyAmount"]);
-                            MessageBox.Show("satici bakiye:" + saticiBakiye);
+                          //  MessageBox.Show("satici bakiye:" + saticiBakiye);
                         }
                         dr.Close();
                         
@@ -104,7 +104,7 @@ namespace WindowsFormsApp1
                         if (data.Read())
                         {
                             aliciBakiye = Convert.ToInt32(data["MoneyAmount"]);
-                            MessageBox.Show("alici bakiye:" + aliciBakiye);
+                           // MessageBox.Show("alici bakiye:" + aliciBakiye);
                         }
                         data.Close();
                         
@@ -117,15 +117,15 @@ namespace WindowsFormsApp1
                         command.Parameters.AddWithValue("@aliciBakiye", aliciBakiye);
                         command.Parameters.AddWithValue("@saticiBakiye", saticiBakiye);
                         command.ExecuteNonQuery();
+                        MessageBox.Show("Alıcının Bakiyesinden 600 lira saticinin bakiyesine gönderilmiştir.");
+                        //MessageBox.Show(
+                        //"aliciID:" + ui +
+                        //"\nsaticiID:" + Convert.ToInt32(lblSaticiId.Text) +
+                        //"\nurunID:" + urunId +
+                        //"\naliciBakiye:" + aliciBakiye +
+                        //"\nsaticiBakiye:" + saticiBakiye);
 
-                        MessageBox.Show(
-                        "aliciID:" + ui +
-                        "\nsaticiID:" + Convert.ToInt32(lblSaticiId.Text) +
-                        "\nurunID:" + urunId +
-                        "\naliciBakiye:" + aliciBakiye +
-                        "\nsaticiBakiye:" + saticiBakiye);
-
-                        // alınan ürünü satılanürün tablosundan silme
+                        //// alınan ürünü satılanürün tablosundan silme
                         SqlCommand com = new SqlCommand(@" delete from tblProduct2 where ProductID=@productID", baglanti);
                         com.Parameters.AddWithValue("@productID", urunId);
                         com.ExecuteNonQuery();

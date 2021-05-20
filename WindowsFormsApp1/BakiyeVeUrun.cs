@@ -36,7 +36,12 @@ namespace WindowsFormsApp1
             command.ExecuteNonQuery();
             MessageBox.Show("Ürün Admin onayına gönderildi onaylandıktan sonra yayınlacaktır!");
             baglanti.Close();
-           
+            txtAdi.Text = "";
+            txtMiktar.Text = "";
+            txtFiyat.Text = "";
+
+
+
         }
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
