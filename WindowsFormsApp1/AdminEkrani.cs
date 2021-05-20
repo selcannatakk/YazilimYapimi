@@ -100,6 +100,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Onay İşlemi Gerçekleşti.");
                 
             }
+
             else
             {      
                 // insert
