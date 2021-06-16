@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-7GMMT8H;Initial Catalog=Projets;Integrated Security=True");
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {

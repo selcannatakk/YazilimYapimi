@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     {
         int userId;
         
-        SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-7GMMT8H;Initial Catalog=Projets;Integrated Security=True");
         public AdminEkrani()
         {
             
@@ -26,10 +26,7 @@ namespace WindowsFormsApp1
 
         private void AdminEkrani_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'projetsDataSet.tblProduct' table. You can move, or remove it, as needed.
-            this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
-            // TODO: This line of code loads data into the 'projetsDataSet.AdminMoney' table. You can move, or remove it, as needed.
-            this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
+           
 
         }
 
@@ -82,7 +79,7 @@ namespace WindowsFormsApp1
             command.Parameters.AddWithValue("@productName", lblAdi.Text);
             command.ExecuteNonQuery();
             MessageBox.Show("Bekleme listesinden silinip onaylanmıstır.");
-            this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
+         //   this.tblProductTableAdapter.Fill(this.projetsDataSet.tblProduct);
             baglanti.Close();
         }
 
@@ -124,16 +121,14 @@ namespace WindowsFormsApp1
             command.ExecuteNonQuery();
             MessageBox.Show("Bekleme listesinden silinip onaylanmıstır.");
 
-            this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
+          //  this.adminMoneyTableAdapter.Fill(this.projetsDataSet.AdminMoney);
             baglanti.Close();
 
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            Hareket hareket = new Hareket();
-            hareket.Show();
-            this.Hide();
+           
         }
     }
 }

@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Xml;
 
 namespace WindowsFormsApp1
 {
     public partial class SaticiEkrani : Form
     {
         int userId;
-        SqlConnection baglanti = new SqlConnection(@"Data Source=desktop-6LL8GP9;Initial Catalog=Projets;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-7GMMT8H;Initial Catalog=Projets;Integrated Security=True");
 
         //  string saticiMoney;
         public SaticiEkrani(int id)
@@ -22,7 +23,6 @@ namespace WindowsFormsApp1
             userId = id;
             InitializeComponent();
         }
-
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
@@ -65,6 +65,21 @@ namespace WindowsFormsApp1
             Giris g = new Giris();
             g.Show();
             this.Hide();
+        }
+
+        private void guna2GradientButton3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void SaticiEkrani_Load(object sender, EventArgs e)
+        {
+            string bugun = "https://www.tcmb.gov.tr/kurlar/today.xml";
+            var xmldosya = new XmlDocument();
+            xmldosya.Load(bugun);
+
+            string dolaralis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
+            lbldolar.Text = dolaralis;
         }
     }
 }
